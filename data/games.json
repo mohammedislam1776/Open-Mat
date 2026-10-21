@@ -1,0 +1,472 @@
+[
+  {
+    "id": "PE01",
+    "name": "Find your frames",
+    "category": "pin_escapes",
+    "skills": [
+      "framing",
+      "guard_recovery"
+    ],
+    "starting_position": "You begin on bottom in side control.",
+    "user_objective": "Recover guard or come to a seated position.",
+    "partner_objective": "Maintain controlled chest contact.",
+    "reset_condition": "Reset on guard recovery or sitting up. Otherwise continue until the round ends.",
+    "rules": [
+      "No submissions. Stay within the starting position\u2019s task.",
+      "Use controlled resistance; reset rather than force a trapped joint."
+    ],
+    "safety_constraints": [
+      "Agree on resistance before starting. Stop on any tap, pain, or request.",
+      "No explosive bridging, neck cranks, slams, or jumping movements."
+    ],
+    "technique_hints": [
+      "Rehearse a forearm frame at the shoulder and a hip-side frame without resistance.",
+      "Try a small hip escape to make room for a knee, then reconnect your guard."
+    ],
+    "partner_variants": {
+      "lower": "Partner starts with settled chest contact; build your frames from there.",
+      "similar": "Start with light chest contact and your elbows close to your body.",
+      "higher": "Start with your frames established and space for your near knee; partner cannot isolate your arms."
+    },
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/side_control/chext_to_chest_side_control/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Adjustments, timing, and hints are app-authored; not source rules.",
+    "video_url": "https://www.youtube.com/watch?v=Ps3nesZp1YU",
+    "video_relationship": "related instruction; not a demonstration of this exact game",
+    "source_untested": false,
+    "source_reviewed_in_app_build": false
+  },
+  {
+    "id": "PE02",
+    "name": "Escape the arm isolation",
+    "category": "pin_escapes",
+    "skills": [
+      "framing",
+      "guard_recovery"
+    ],
+    "starting_position": "You begin on bottom in side control.",
+    "user_objective": "Prevent arm isolation and recover guard or turtle.",
+    "partner_objective": "Maintain the pin and isolate an arm without applying a lock.",
+    "reset_condition": "Reset after escape; release arm control immediately if it strains the shoulder.",
+    "rules": [
+      "No submissions. Stay within the starting position\u2019s task.",
+      "Use controlled resistance; reset rather than force a trapped joint."
+    ],
+    "safety_constraints": [
+      "Agree on resistance before starting. Stop on any tap, pain, or request.",
+      "No explosive bridging, neck cranks, slams, or jumping movements."
+    ],
+    "technique_hints": [
+      "Practice keeping elbows near your ribs and building a safe frame.",
+      "Explore turning onto your side and inserting your knee when space appears."
+    ],
+    "partner_variants": {
+      "lower": "Partner starts with connected hands; you begin with elbows close.",
+      "similar": "Partner begins with loose chest contact and no isolated arm.",
+      "higher": "Begin on your side with a hip frame; partner may not connect hands."
+    },
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/side_control/arm_isolation/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Adjustments, timing, and hints are app-authored; not source rules.",
+    "video_url": "https://www.youtube.com/watch?v=Q2aN-OiUEw8",
+    "video_relationship": "related instruction; not a demonstration of this exact game",
+    "source_untested": false,
+    "source_reviewed_in_app_build": false
+  },
+  {
+    "id": "GP01",
+    "name": "Clear the knee shield",
+    "category": "guard_passing",
+    "skills": [
+      "connection",
+      "passing"
+    ],
+    "starting_position": "You begin on top in knee-shield half guard.",
+    "user_objective": "Clear the knee shield while remaining engaged.",
+    "partner_objective": "Keep the knee between your bodies.",
+    "reset_condition": "Reset once the knee shield is cleared. Do not continue to a submission.",
+    "rules": [
+      "No submissions. Stay within the starting position\u2019s task.",
+      "Use controlled resistance; reset rather than force a trapped joint."
+    ],
+    "safety_constraints": [
+      "Agree on resistance before starting. Stop on any tap, pain, or request.",
+      "No explosive bridging, neck cranks, slams, or jumping movements."
+    ],
+    "technique_hints": [
+      "Rehearse controlling the shielding leg without twisting the knee.",
+      "Try changing angle and closing space as the shield clears."
+    ],
+    "partner_variants": {
+      "lower": "Partner begins with a strong knee shield and both frames.",
+      "similar": "Start with a knee shield and light upper-body frames.",
+      "higher": "Start with the shield partly cleared; partner begins with one frame."
+    },
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/guard_games/supine_guard/half_guard/maintain-shield/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Adjustments, timing, and hints are app-authored; not source rules.",
+    "video_url": "https://www.youtube.com/watch?v=38xCki4sTYY",
+    "video_relationship": "related instruction; not a demonstration of this exact game",
+    "source_untested": true,
+    "source_reviewed_in_app_build": false
+  },
+  {
+    "id": "GP02",
+    "name": "Free the trapped leg",
+    "category": "guard_passing",
+    "skills": [
+      "connection",
+      "passing"
+    ],
+    "starting_position": "You begin on top in half guard.",
+    "user_objective": "Free your trapped leg and settle past the guard.",
+    "partner_objective": "Remove your underhooks and recover a knee shield.",
+    "reset_condition": "Reset after a pass or knee-shield recovery.",
+    "rules": [
+      "No submissions. Stay within the starting position\u2019s task.",
+      "Use controlled resistance; reset rather than force a trapped joint."
+    ],
+    "safety_constraints": [
+      "Agree on resistance before starting. Stop on any tap, pain, or request.",
+      "No explosive bridging, neck cranks, slams, or jumping movements."
+    ],
+    "technique_hints": [
+      "Rehearse maintaining balance before trying to free your knee.",
+      "Try gradually clearing the knee line while keeping controlled upper-body connection."
+    ],
+    "partner_variants": {
+      "lower": "Begin with no underhook; partner has an established head-side frame.",
+      "similar": "Begin with one underhook and the partner\u2019s head-side frame.",
+      "higher": "Begin with two light underhooks and your knee close to clearing."
+    },
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/guard_games/supine_guard/half_guard/underhook_control/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Adjustments, timing, and hints are app-authored; not source rules.",
+    "video_url": "https://www.youtube.com/watch?v=-BJrPT7VfEI",
+    "video_relationship": "related instruction; not a demonstration of this exact game",
+    "source_untested": false,
+    "source_reviewed_in_app_build": false
+  },
+  {
+    "id": "TC01",
+    "name": "Stay connected",
+    "category": "top_control",
+    "skills": [
+      "balance",
+      "pinning"
+    ],
+    "starting_position": "You begin on top in chest-to-chest side control.",
+    "user_objective": "Maintain chest contact and controlled positional balance.",
+    "partner_objective": "Insert knees or feet, sit up, or reverse.",
+    "reset_condition": "Reset when partner escapes. Top\u2019s task is continuous; no invented hold-time score.",
+    "rules": [
+      "No submissions. Stay within the starting position\u2019s task.",
+      "Use controlled resistance; reset rather than force a trapped joint."
+    ],
+    "safety_constraints": [
+      "Agree on resistance before starting. Stop on any tap, pain, or request.",
+      "No explosive bridging, neck cranks, slams, or jumping movements."
+    ],
+    "technique_hints": [
+      "Rehearse following a slow hip turn without squeezing harder.",
+      "Explore adjusting your base as your partner changes direction."
+    ],
+    "partner_variants": {
+      "lower": "Partner begins on their side with frames established.",
+      "similar": "Begin with light chest contact and no isolated arm.",
+      "higher": "Begin with settled chest contact; partner starts flat with elbows close."
+    },
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/side_control/maintain_connection/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Adjustments, timing, and hints are app-authored; not source rules.",
+    "video_url": "https://www.youtube.com/watch?v=Ps3nesZp1YU",
+    "video_relationship": "related instruction; not a demonstration of this exact game",
+    "source_untested": true,
+    "source_reviewed_in_app_build": false
+  },
+  {
+    "id": "TC02",
+    "name": "Follow the transition",
+    "category": "top_control",
+    "skills": [
+      "balance",
+      "pinning"
+    ],
+    "starting_position": "You begin on top in side control.",
+    "user_objective": "Move to north-south or opposite side control and hold for three seconds.",
+    "partner_objective": "Insert knees or feet, or reverse.",
+    "reset_condition": "Reset after a three-second controlled transition or partner escape.",
+    "rules": [
+      "No submissions. Stay within the starting position\u2019s task.",
+      "Use controlled resistance; reset rather than force a trapped joint."
+    ],
+    "safety_constraints": [
+      "Agree on resistance before starting. Stop on any tap, pain, or request.",
+      "No explosive bridging, neck cranks, slams, or jumping movements."
+    ],
+    "technique_hints": [
+      "Walk around the head slowly while maintaining comfortable chest contact.",
+      "Change your base before moving; avoid loading the neck."
+    ],
+    "partner_variants": {
+      "lower": "Partner starts with frames and one knee near the inside space.",
+      "similar": "Start in light side control with partner\u2019s elbows close.",
+      "higher": "Start near north-south with comfortable chest contact."
+    },
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/north_south/use_connection/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Adjustments, timing, and hints are app-authored; not source rules.",
+    "video_url": "https://www.youtube.com/watch?v=cans383if9Q",
+    "video_relationship": "related instruction; not a demonstration of this exact game",
+    "source_untested": true,
+    "source_reviewed_in_app_build": false
+  },
+  {
+    "id": "TD01",
+    "name": "Find the knee",
+    "category": "takedowns",
+    "skills": [
+      "standing_connection",
+      "balance",
+      "entries"
+    ],
+    "starting_position": "Both start standing without grips; you are the attacker.",
+    "user_objective": "Make repeated light touches to either knee without grabbing or driving through.",
+    "partner_objective": "Use distance, movement, and hands to deny knee touches.",
+    "reset_condition": "Continuous light-touch task; return to comfortable distance after each touch and continue. No takedown score.",
+    "rules": [
+      "No submissions, jumping entries, slams, sacrifice throws, or forced joint twisting.",
+      "Use only familiar, coached movements. No completed takedowns or lifts. Stay standing; stop and reset if balance is lost."
+    ],
+    "safety_constraints": [
+      "Agree on resistance and boundaries. Use a clear, suitable matted area away from other pairs. Stop on any tap, pain, or request.",
+      "Release a trapped leg rather than twist a planted knee. No neck pulling. Keep movement controlled; do not force a fall."
+    ],
+    "technique_hints": [
+      "Rehearse stance movement and a small level change without diving forward.",
+      "Explore timing a light touch as your partner moves; stay balanced."
+    ],
+    "partner_variants": {
+      "lower": "Partner starts at a little more distance and may use light hand contact to deny access.",
+      "similar": "Start at mutually agreed light-touch distance without grips.",
+      "higher": "Partner begins within easy reach and initially defends with footwork only."
+    },
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [
+      "clear_matted_standing_area"
+    ],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/take_downs/knee_tag/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Adjustments, timing, and hints are app-authored; not source rules.",
+    "video_url": "https://www.youtube.com/watch?v=WSsl0ImI944",
+    "video_relationship": "related instruction; not a demonstration of this exact game",
+    "source_untested": true,
+    "source_reviewed_in_app_build": false,
+    "standing": true,
+    "allows_controlled_descent": false
+  },
+  {
+    "id": "TD02",
+    "name": "Keep the single-leg connection",
+    "category": "takedowns",
+    "skills": [
+      "standing_connection",
+      "balance",
+      "entries"
+    ],
+    "starting_position": "You begin standing as attacker with one of your partner\u2019s legs held between your legs.",
+    "user_objective": "Maintain the single-leg connection while moving slowly together.",
+    "partner_objective": "Stay balanced on the free foot and free the captured leg.",
+    "reset_condition": "Reset when the partner frees the leg, or immediately when either player loses balance. Your connection task is continuous.",
+    "rules": [
+      "No submissions, jumping entries, slams, sacrifice throws, or forced joint twisting.",
+      "Use only familiar, coached movements. No completed takedowns or lifts. Stay standing; stop and reset if balance is lost."
+    ],
+    "safety_constraints": [
+      "Agree on resistance and boundaries. Use a clear, suitable matted area away from other pairs. Stop on any tap, pain, or request.",
+      "Release a trapped leg rather than twist a planted knee. No neck pulling. Keep movement controlled; do not force a fall."
+    ],
+    "technique_hints": [
+      "Start with cooperative balance and a light connection; do not raise the leg high.",
+      "Explore small steps while keeping your own posture and allowing the partner to move safely."
+    ],
+    "partner_variants": {
+      "lower": "Begin with a shallow connection; partner may immediately work to free the leg.",
+      "similar": "Begin with a light established single-leg connection and stable balance.",
+      "higher": "Begin with the connection comfortably established; partner first uses gentle movement rather than hand-fighting."
+    },
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [
+      "clear_matted_standing_area"
+    ],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/take_downs/single_leg/connection_and_movement/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Adjustments, timing, and hints are app-authored; not source rules.",
+    "video_url": "https://www.youtube.com/watch?v=H8L7sI0oYZ4",
+    "video_relationship": "related instruction; not a demonstration of this exact game",
+    "source_untested": false,
+    "source_reviewed_in_app_build": false,
+    "standing": true,
+    "allows_controlled_descent": false
+  },
+  {
+    "id": "TD03",
+    "name": "Connect the body lock",
+    "category": "takedowns",
+    "skills": [
+      "standing_connection",
+      "balance",
+      "entries"
+    ],
+    "starting_position": "Both start standing with reciprocal underhooks; you are working to connect your hands.",
+    "user_objective": "Get inside or behind the elbows and join your hands behind the partner\u2019s back.",
+    "partner_objective": "Deny your hand connection and seek their own body lock.",
+    "reset_condition": "Reset immediately when either player joins hands behind the back. No squeeze, lift, or throw after the connection.",
+    "rules": [
+      "No submissions, jumping entries, slams, sacrifice throws, or forced joint twisting.",
+      "Use only familiar, coached movements. No completed takedowns or lifts. Stay standing; stop and reset if balance is lost."
+    ],
+    "safety_constraints": [
+      "Agree on resistance and boundaries. Use a clear, suitable matted area away from other pairs. Stop on any tap, pain, or request.",
+      "Release a trapped leg rather than twist a planted knee. No neck pulling. Keep movement controlled; do not force a fall."
+    ],
+    "technique_hints": [
+      "Rehearse moving your hands inside the elbows with light contact.",
+      "Move your feet to find an angle rather than wrenching the shoulder."
+    ],
+    "partner_variants": {
+      "lower": "Partner begins with better inside elbow position; you work to recover access.",
+      "similar": "Start with reciprocal underhooks and equal inside position.",
+      "higher": "Start with one hand already behind the partner\u2019s back; partner gently denies the second hand."
+    },
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [
+      "clear_matted_standing_area"
+    ],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/take_downs/body_lock/connect_the_hands/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Adjustments, timing, and hints are app-authored; not source rules.",
+    "video_url": "https://www.youtube.com/watch?v=H8L7sI0oYZ4",
+    "video_relationship": "related instruction; not a demonstration of this exact game",
+    "source_untested": false,
+    "source_reviewed_in_app_build": false,
+    "standing": true,
+    "allows_controlled_descent": false
+  },
+  {
+    "id": "TD04",
+    "name": "Single-leg off-balance",
+    "category": "takedowns",
+    "skills": [
+      "standing_connection",
+      "balance",
+      "entries"
+    ],
+    "starting_position": "You begin as attacker in a captured single leg, with both partners balanced and ready.",
+    "user_objective": "Maintain connection and guide the partner onto hands or hips with a slow, controlled off-balance.",
+    "partner_objective": "Maintain balance and free the captured leg.",
+    "reset_condition": "Reset after controlled contact of hands or hips with the mat, or when the leg is freed. Release and reset if the descent cannot be controlled.",
+    "rules": [
+      "No submissions, jumping entries, slams, sacrifice throws, or forced joint twisting.",
+      "Use only familiar, coached movements. Only a slow, controlled descent to hands or hips is allowed; no lifts or airborne finishes."
+    ],
+    "safety_constraints": [
+      "Agree on resistance and boundaries. Use a clear, suitable matted area away from other pairs. Stop on any tap, pain, or request.",
+      "Release a trapped leg rather than twist a planted knee. No neck pulling. Both partners must already know how to receive the movement safely; otherwise use the connection-only game."
+    ],
+    "technique_hints": [
+      "Cooperatively rehearse a familiar, coached off-balance and safe receiving movement first.",
+      "Explore small angle changes without twisting the planted knee or lifting the partner."
+    ],
+    "partner_variants": {
+      "lower": "Begin with a shallow capture; partner can use light hand-fighting immediately.",
+      "similar": "Begin with an established single-leg connection and gentle resistance.",
+      "higher": "Begin from a comfortable connection and agreed favorable angle; partner uses light balance recovery."
+    },
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [
+      "clear_matted_standing_area"
+    ],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/take_downs/single_leg/connection_and_destabilization/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Adjustments, timing, and hints are app-authored; not source rules.",
+    "video_url": "https://www.youtube.com/watch?v=H8L7sI0oYZ4",
+    "video_relationship": "related instruction; not a demonstration of this exact game",
+    "source_untested": false,
+    "source_reviewed_in_app_build": false,
+    "standing": true,
+    "allows_controlled_descent": true
+  }
+]
