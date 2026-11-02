@@ -1,7 +1,29 @@
 import json
 from pathlib import Path
 
-CATEGORIES = {'pin_escapes': 'Pin escapes', 'guard_passing': 'Guard passing', 'top_control': 'Top control', 'takedowns': 'Takedowns'}
+CATEGORIES = {
+    'pin_escapes': 'Pin escapes',
+    'guard_passing': 'Guard passing',
+    'top_control': 'Top control',
+    'takedowns': 'Takedowns',
+    'guard_offense': 'Guard offense',
+    'guard_retention': 'Guard retention',
+    'submission_offense': 'Submission offense',
+    'submission_defense': 'Submission defense',
+    'leg_entanglements': 'Leg entanglements',
+}
+
+REHEARSAL_CUES = {
+    'pin_escapes': 'cooperative framing and guard recovery from the chosen pin',
+    'guard_passing': 'lightly clearing the shield or knee line without forcing a trapped leg',
+    'top_control': 'following slow hip turns with comfortable chest connection',
+    'takedowns': 'familiar stance, entries, and balance recovery in a clear matted area',
+    'guard_offense': 'cooperative hand-posting and shoulder connections without forced falls',
+    'guard_retention': 'comfortable hip turns and rebuilding inside hand/foot connections without forced inversions',
+    'submission_offense': 'unloaded grip/arm-separation entries; release at the target control, without finishing pressure',
+    'submission_defense': 'gentle hand-fighting and early escapes with the controlling grip loose; release before joint or neck loading',
+    'leg_entanglements': 'familiar unloaded leg connections and complete disengagement; no heel exposure, twisting, or finishes',
+}
 
 
 def load_games():
