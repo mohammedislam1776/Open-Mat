@@ -468,5 +468,715 @@
     "source_reviewed_in_app_build": false,
     "standing": true,
     "allows_controlled_descent": true
+  },
+  {
+    "id": "GO01",
+    "name": "Create a hand post",
+    "category": "guard_offense",
+    "skills": [
+      "off_balancing",
+      "guard_attack"
+    ],
+    "starting_position": "You start in seated guard with feet inside a kneeling partner\u2019s knees.",
+    "user_objective": "Off-balance your partner to create repeated hand posts.",
+    "partner_objective": "Clear connections and flatten you onto your back.",
+    "reset_condition": "Your posting task is continuous; reset if you are flattened, then continue. No separate sweep score.",
+    "technique_hints": [
+      "Explore a light pull as your feet maintain inside connection.",
+      "Change the direction of your off-balance when the partner recovers posture."
+    ],
+    "partner_variants": {
+      "lower": "Start without hand connections; partner begins upright.",
+      "similar": "Start seated with light hand connections and feet inside.",
+      "higher": "Start with comfortable connections and the partner leaning slightly forward."
+    },
+    "rules": [
+      "No submission finishes or finishing pressure. Stay within the stated positional task.",
+      "No submissions, standing lifts, or forced falls. Keep the task at hand-posting."
+    ],
+    "safety_constraints": [
+      "Agree on resistance before starting. Stop and release immediately on any tap, pain, or request.",
+      "No explosive escapes, slams, neck cranks, or forced joint movement."
+    ],
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/guard_games/seated_guard/causing_posts/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Partner adjustments, hints, and timing are app-authored; not source rules. Follow this card\u2019s restrictions even if a related video shows finishes.",
+    "video_url": "https://www.youtube.com/watch?v=X_DMrrud25I",
+    "video_relationship": "related instruction; not a demonstration of this exact game",
+    "source_untested": false,
+    "source_reviewed_in_app_build": false,
+    "submission_policy": "control_only",
+    "user_role": "guard_player"
+  },
+  {
+    "id": "GO02",
+    "name": "Connect behind the shoulders",
+    "category": "guard_offense",
+    "skills": [
+      "off_balancing",
+      "shoulder_connection"
+    ],
+    "starting_position": "You start seated with feet inside a kneeling partner\u2019s knees.",
+    "user_objective": "Create a hand post, then secure double underhooks and join hands behind the partner.",
+    "partner_objective": "Clear connections and flatten you onto your back.",
+    "reset_condition": "Reset on your joined-hand shoulder connection or when the partner flattens you.",
+    "technique_hints": [
+      "Notice the shoulder space that opens when the partner posts.",
+      "Explore moving your upper body toward the shoulders without pulling on the neck."
+    ],
+    "partner_variants": {
+      "lower": "Begin with no hand grips; partner has elbows close.",
+      "similar": "Start with light hand connections and feet inside.",
+      "higher": "Begin with one underhook; create a post before connecting the second."
+    },
+    "rules": [
+      "No submission finishes or finishing pressure. Stay within the stated positional task.",
+      "No lifts, forced falls, or neck pulling."
+    ],
+    "safety_constraints": [
+      "Agree on resistance before starting. Stop and release immediately on any tap, pain, or request.",
+      "No explosive escapes, slams, neck cranks, or forced joint movement."
+    ],
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/guard_games/seated_guard/connect_to_the_shoulders/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Partner adjustments, hints, and timing are app-authored; not source rules. Follow this card\u2019s restrictions even if a related video shows finishes.",
+    "video_url": "https://www.youtube.com/watch?v=X_DMrrud25I",
+    "video_relationship": "related instruction; not a demonstration of this exact game",
+    "source_untested": false,
+    "source_reviewed_in_app_build": false,
+    "submission_policy": "control_only",
+    "user_role": "guard_player"
+  },
+  {
+    "id": "GO03",
+    "name": "Off-balance from open guard",
+    "category": "guard_offense",
+    "skills": [
+      "sweeping",
+      "off_balancing"
+    ],
+    "starting_position": "You begin supine with inside connections to a standing partner.",
+    "user_objective": "Off-balance your partner onto hands or hips while maintaining connection.",
+    "partner_objective": "Clear your feet to reach the knee line while staying balanced.",
+    "reset_condition": "Reset after controlled contact onto hips or the partner clears your feet to the knee line. Sustain hand posts rather than immediately resetting. The knee-line reset is an OpenMat adaptation.",
+    "technique_hints": [
+      "Find a comfortable foot/hand connection and explore a small change of angle.",
+      "Follow the partner\u2019s balance instead of forcing a trapped knee."
+    ],
+    "partner_variants": {
+      "lower": "Start disconnected; establish your inside connections first.",
+      "similar": "Begin with comfortable inside connections and a balanced partner.",
+      "higher": "Start with one additional hand connection and the partner at a mutually agreed favorable angle."
+    },
+    "rules": [
+      "No submission finishes or finishing pressure. Stay within the stated positional task.",
+      "Only controlled descents; no airborne sweeps or lifting."
+    ],
+    "safety_constraints": [
+      "Agree on resistance before starting. Stop and release immediately on any tap, pain, or request.",
+      "No explosive escapes, slams, neck cranks, or forced joint movement.",
+      "Use a clear matted area and familiar, coached receiving movements. Release a trapped foot or knee instead of twisting it."
+    ],
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/guard_games/supine_guard/open_guard/open_guard_sweeping/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Partner adjustments, hints, and timing are app-authored; not source rules. Follow this card\u2019s restrictions even if a related video shows finishes.",
+    "video_url": "https://www.youtube.com/watch?v=V4QtQTRwwD0",
+    "video_relationship": "source-linked video; app rules and partner variants are adaptations",
+    "source_untested": false,
+    "source_reviewed_in_app_build": false,
+    "submission_policy": "control_only",
+    "user_role": "guard_player"
+  },
+  {
+    "id": "GR01",
+    "name": "Stay upright in seated guard",
+    "category": "guard_retention",
+    "skills": [
+      "retention",
+      "inside_position"
+    ],
+    "starting_position": "You begin seated with feet inside a kneeling partner\u2019s knees.",
+    "user_objective": "Keep an upright, connected guard as your partner removes connections.",
+    "partner_objective": "Strip your connections and flatten you onto your back.",
+    "reset_condition": "Continuous retention task; reset when the partner flattens you.",
+    "technique_hints": [
+      "Explore keeping feet between your bodies as your partner changes angle.",
+      "Reconnect after a grip is stripped without reaching beyond your balance."
+    ],
+    "partner_variants": {
+      "lower": "Start with no hand connections and the partner already touching your legs.",
+      "similar": "Begin with light hand connections and feet inside.",
+      "higher": "Begin with established hand connections; partner removes one connection at a time."
+    },
+    "rules": [
+      "No submission finishes or finishing pressure. Stay within the stated positional task.",
+      "No sweeps, submissions, or standing lifts in this adaptation."
+    ],
+    "safety_constraints": [
+      "Agree on resistance before starting. Stop and release immediately on any tap, pain, or request.",
+      "No explosive escapes, slams, neck cranks, or forced joint movement."
+    ],
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/guard_games/seated_guard/structure_and_connections/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Partner adjustments, hints, and timing are app-authored; not source rules. Follow this card\u2019s restrictions even if a related video shows finishes.",
+    "video_url": "https://www.youtube.com/watch?v=X_DMrrud25I",
+    "video_relationship": "related instruction; not a demonstration of this exact game",
+    "source_untested": false,
+    "source_reviewed_in_app_build": false,
+    "submission_policy": "control_only",
+    "user_role": "guard_player"
+  },
+  {
+    "id": "GR02",
+    "name": "Rebuild inside connections",
+    "category": "guard_retention",
+    "skills": [
+      "retention",
+      "reconnection"
+    ],
+    "starting_position": "You start supine with knees comfortably tucked; partner stands nearby.",
+    "user_objective": "Build and rebuild inside hand/foot connections while keeping knees and feet in front.",
+    "partner_objective": "Clear your connections while remaining close.",
+    "reset_condition": "Continuous connection work. Reset cooperatively to the same distance if you fully disconnect; no sweep or pass score.",
+    "technique_hints": [
+      "Move your hips to keep the partner in front without forcing an inversion.",
+      "Explore replacing one lost connection with another."
+    ],
+    "partner_variants": {
+      "lower": "Begin disconnected with the partner near your knee line.",
+      "similar": "Start disconnected at comfortable foot-contact distance.",
+      "higher": "Start with one foot connected and partner initially working to remove that connection."
+    },
+    "rules": [
+      "No submission finishes or finishing pressure. Stay within the stated positional task.",
+      "No sweeps, submissions, or progression beyond the connection task."
+    ],
+    "safety_constraints": [
+      "Agree on resistance before starting. Stop and release immediately on any tap, pain, or request.",
+      "No explosive escapes, slams, neck cranks, or forced joint movement.",
+      "No forced inversions or pressure on the neck."
+    ],
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/guard_games/supine_guard/open_guard/create_and_break_connections/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Partner adjustments, hints, and timing are app-authored; not source rules. Follow this card\u2019s restrictions even if a related video shows finishes.",
+    "video_url": "https://www.youtube.com/watch?v=V4QtQTRwwD0",
+    "video_relationship": "source-linked video; app rules and partner variants are adaptations",
+    "source_untested": false,
+    "source_reviewed_in_app_build": false,
+    "submission_policy": "control_only",
+    "user_role": "guard_player"
+  },
+  {
+    "id": "GR03",
+    "name": "Keep your knee shield",
+    "category": "guard_retention",
+    "skills": [
+      "retention",
+      "knee_shield"
+    ],
+    "starting_position": "You begin on bottom in knee-shield half guard.",
+    "user_objective": "Keep your knee between your bodies and preserve your frames.",
+    "partner_objective": "Clear your knee shield while remaining engaged.",
+    "reset_condition": "Reset when the partner clears your shield. Your retention task is continuous.",
+    "technique_hints": [
+      "Rehearse reconnecting a comfortable upper-body frame as your knee follows the partner.",
+      "Explore a small hip-angle adjustment without twisting the trapped knee."
+    ],
+    "partner_variants": {
+      "lower": "Begin with a shallow shield and one upper-body frame.",
+      "similar": "Begin with a comfortable shield and light upper-body frames.",
+      "higher": "Begin with an established shield; partner first works only against the shielding leg."
+    },
+    "rules": [
+      "No submission finishes or finishing pressure. Stay within the stated positional task.",
+      "No passing beyond the cleared shield, sweeps, or submission attempts."
+    ],
+    "safety_constraints": [
+      "Agree on resistance before starting. Stop and release immediately on any tap, pain, or request.",
+      "No explosive escapes, slams, neck cranks, or forced joint movement."
+    ],
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/guard_games/supine_guard/half_guard/maintain-shield/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Partner adjustments, hints, and timing are app-authored; not source rules. Follow this card\u2019s restrictions even if a related video shows finishes.",
+    "video_url": "https://www.youtube.com/watch?v=38xCki4sTYY",
+    "video_relationship": "related instruction; not a demonstration of this exact game",
+    "source_untested": true,
+    "source_reviewed_in_app_build": false,
+    "submission_policy": "control_only",
+    "user_role": "guard_player"
+  },
+  {
+    "id": "SO01",
+    "name": "Complete the figure-four grip",
+    "category": "submission_offense",
+    "skills": [
+      "submission_entry",
+      "arm_control"
+    ],
+    "starting_position": "You are on top in side control with a far-wrist grip only.",
+    "user_objective": "Complete a reinforced figure-four arm-control grip without applying a shoulder lock.",
+    "partner_objective": "Deny the grip and recover feet inside or reverse.",
+    "reset_condition": "Reset as soon as your figure-four grip is complete, or after the partner recovers feet inside or reverses.",
+    "technique_hints": [
+      "Explore controlling the wrist with a relaxed grip before joining your hands.",
+      "Follow the partner\u2019s arm position without lifting or twisting the shoulder."
+    ],
+    "partner_variants": {
+      "lower": "Partner begins with elbow close and a protective free-hand frame.",
+      "similar": "Begin with a light far-wrist connection.",
+      "higher": "Begin with the wrist controlled and your second hand near the connection; do not pre-load the shoulder."
+    },
+    "rules": [
+      "No submission finishes or finishing pressure. Stay within the stated positional task."
+    ],
+    "safety_constraints": [
+      "Agree on resistance before starting. Stop and release immediately on any tap, pain, or request.",
+      "No explosive escapes, slams, neck cranks, or forced joint movement.",
+      "Release if either partner\u2019s movement strains the shoulder. Grip completion ends the attempt; never rotate into a lock."
+    ],
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/submissions/twisting_arm_locks/complete_the_grip/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Partner adjustments, hints, and timing are app-authored; not source rules. Follow this card\u2019s restrictions even if a related video shows finishes.",
+    "video_url": "https://www.youtube.com/watch?v=Q2aN-OiUEw8",
+    "video_relationship": "related instruction; not a demonstration of this exact game",
+    "source_untested": false,
+    "source_reviewed_in_app_build": false,
+    "submission_policy": "control_only",
+    "user_role": "attacker"
+  },
+  {
+    "id": "SO02",
+    "name": "Separate the armbar defense",
+    "category": "submission_offense",
+    "skills": [
+      "submission_setup",
+      "grip_separation"
+    ],
+    "starting_position": "You begin in familiar armbar control with the partner\u2019s hands joined.",
+    "user_objective": "Maintain elbow control and separate the joined hands without extending the elbow.",
+    "partner_objective": "Preserve the joined grip and free the arm.",
+    "reset_condition": "Reset immediately after the hands separate or the partner frees the arm. No extension after the grip breaks.",
+    "technique_hints": [
+      "Cooperatively rehearse a light grip-separation task without hip pressure.",
+      "Adjust your connection to follow the arm; do not jerk the hands apart."
+    ],
+    "partner_variants": {
+      "lower": "Partner starts with a comfortable strong joined-hand grip.",
+      "similar": "Begin with light arm control and a joined-hand defense.",
+      "higher": "Partner starts with fingertips lightly connected; your job remains grip separation, not finishing."
+    },
+    "rules": [
+      "No submission finishes or finishing pressure. Stay within the stated positional task."
+    ],
+    "safety_constraints": [
+      "Agree on resistance before starting. Stop and release immediately on any tap, pain, or request.",
+      "No explosive escapes, slams, neck cranks, or forced joint movement.",
+      "Use familiar coached armbar control only. Keep the elbow bent; release rather than follow an explosive escape."
+    ],
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/submissions/arm_bar/breaking_the_grip/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Partner adjustments, hints, and timing are app-authored; not source rules. Follow this card\u2019s restrictions even if a related video shows finishes.",
+    "video_url": "https://www.youtube.com/watch?v=n2kfNdH6oo4",
+    "video_relationship": "related instruction; not a demonstration of this exact game",
+    "source_untested": false,
+    "source_reviewed_in_app_build": false,
+    "submission_policy": "control_only",
+    "user_role": "attacker"
+  },
+  {
+    "id": "SO03",
+    "name": "Create one-arm-in alignment",
+    "category": "submission_offense",
+    "skills": [
+      "submission_entry",
+      "arm_separation"
+    ],
+    "starting_position": "You begin in closed guard with an overhook or underhook.",
+    "user_objective": "Separate the partner\u2019s hands and create one-arm-in/one-arm-out alignment as a triangle entry.",
+    "partner_objective": "Recover upright posture and deny the arm separation.",
+    "reset_condition": "Reset on the target alignment or recovered upright posture. This explicit reset is an OpenMat adaptation; do not close a finishing triangle.",
+    "technique_hints": [
+      "Explore controlling one arm while changing your hip angle comfortably.",
+      "Notice when the partner separates their hands; capture alignment without squeezing the neck."
+    ],
+    "partner_variants": {
+      "lower": "Begin with a light underhook; partner has upright posture and joined hands.",
+      "similar": "Begin with one comfortable overhook or underhook.",
+      "higher": "Begin with one arm lightly separated and the partner\u2019s posture slightly lowered."
+    },
+    "rules": [
+      "No submission finishes or finishing pressure. Stay within the stated positional task.",
+      "No closed triangle, neck squeeze, or stacking."
+    ],
+    "safety_constraints": [
+      "Agree on resistance before starting. Stop and release immediately on any tap, pain, or request.",
+      "No explosive escapes, slams, neck cranks, or forced joint movement."
+    ],
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/submissions/triangle/arm_in_arm_out/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Partner adjustments, hints, and timing are app-authored; not source rules. Follow this card\u2019s restrictions even if a related video shows finishes.",
+    "video_url": "https://www.youtube.com/watch?v=20j7LcZ5xRY",
+    "video_relationship": "related instruction; not a demonstration of this exact game",
+    "source_untested": false,
+    "source_reviewed_in_app_build": false,
+    "submission_policy": "control_only",
+    "user_role": "attacker"
+  },
+  {
+    "id": "SD01",
+    "name": "Free the arm before extension",
+    "category": "submission_defense",
+    "skills": [
+      "submission_escape",
+      "elbow_recovery"
+    ],
+    "starting_position": "You are the defender in familiar armbar control; partner holds your forearm against their chest.",
+    "user_objective": "Free your arm from the partner\u2019s control without explosive movement.",
+    "partner_objective": "Retain arm control without extending your elbow.",
+    "reset_condition": "Reset when your arm is free, or immediately if control loads the elbow. Partner\u2019s task is retention, not finishing.",
+    "technique_hints": [
+      "Start with cooperative movement to locate space for the elbow.",
+      "Use small adjustments and hand-fighting; release/reset rather than wrenching the elbow."
+    ],
+    "partner_variants": {
+      "lower": "Partner begins with settled arm control and you start without a joined-hand defense.",
+      "similar": "Start with light forearm control and your elbow comfortably bent.",
+      "higher": "Begin with your hands connected and elbow close to the edge of the partner\u2019s control."
+    },
+    "rules": [
+      "No submission finishes or finishing pressure. Stay within the stated positional task."
+    ],
+    "safety_constraints": [
+      "Agree on resistance before starting. Stop and release immediately on any tap, pain, or request.",
+      "No explosive escapes, slams, neck cranks, or forced joint movement.",
+      "Partner never extends the elbow or adds finishing hip pressure. Use only a familiar coached position."
+    ],
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/submissions/arm_bar/maintaining_the_finish/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Partner adjustments, hints, and timing are app-authored; not source rules. Follow this card\u2019s restrictions even if a related video shows finishes.",
+    "video_url": "https://www.youtube.com/watch?v=n2kfNdH6oo4",
+    "video_relationship": "related instruction; not a demonstration of this exact game",
+    "source_untested": false,
+    "source_reviewed_in_app_build": false,
+    "submission_policy": "control_only",
+    "user_role": "defender"
+  },
+  {
+    "id": "SD02",
+    "name": "Deny the figure-four grip",
+    "category": "submission_defense",
+    "skills": [
+      "submission_prevention",
+      "guard_recovery"
+    ],
+    "starting_position": "You begin on bottom in side control; partner has a far-wrist grip only.",
+    "user_objective": "Prevent the figure-four connection and recover feet inside or reverse.",
+    "partner_objective": "Complete the figure-four grip without applying a shoulder lock.",
+    "reset_condition": "Reset on your guard recovery/reversal or as soon as the partner completes the grip. Do not continue into finishing pressure.",
+    "technique_hints": [
+      "Explore keeping the elbow comfortably close as you recover a frame.",
+      "Make space with controlled hip movement rather than twisting against a fixed wrist."
+    ],
+    "partner_variants": {
+      "lower": "Partner begins with wrist control and the second hand close to connecting.",
+      "similar": "Begin with a light wrist grip and space for a frame.",
+      "higher": "Start on your side with elbow near the ribs; partner\u2019s wrist grip is loose."
+    },
+    "rules": [
+      "No submission finishes or finishing pressure. Stay within the stated positional task."
+    ],
+    "safety_constraints": [
+      "Agree on resistance before starting. Stop and release immediately on any tap, pain, or request.",
+      "No explosive escapes, slams, neck cranks, or forced joint movement.",
+      "Release any wrist/arm connection that strains the shoulder."
+    ],
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/submissions/twisting_arm_locks/complete_the_grip/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Partner adjustments, hints, and timing are app-authored; not source rules. Follow this card\u2019s restrictions even if a related video shows finishes.",
+    "video_url": "https://www.youtube.com/watch?v=Q2aN-OiUEw8",
+    "video_relationship": "related instruction; not a demonstration of this exact game",
+    "source_untested": false,
+    "source_reviewed_in_app_build": false,
+    "submission_policy": "control_only",
+    "user_role": "defender"
+  },
+  {
+    "id": "SD03",
+    "name": "Clear front-headlock control",
+    "category": "submission_defense",
+    "skills": [
+      "submission_escape",
+      "head_control"
+    ],
+    "starting_position": "You begin in turtle beneath a partner\u2019s light chin-and-elbow front-headlock control.",
+    "user_objective": "Free your head from the partner\u2019s control.",
+    "partner_objective": "Keep your head covered and hands grounded without applying a submission.",
+    "reset_condition": "Reset when your head is free, or immediately if pressure loads the neck.",
+    "technique_hints": [
+      "Rehearse gentle hand-fighting with a loose connection first.",
+      "Explore changing body angle while keeping the neck comfortable; never yank the head free."
+    ],
+    "partner_variants": {
+      "lower": "Partner begins with settled but unloaded chin-and-elbow connection.",
+      "similar": "Start with light chin-and-elbow control and no squeeze.",
+      "higher": "Begin with one hand already framing against the controlling arm; partner uses a loose connection."
+    },
+    "rules": [
+      "No submission finishes or finishing pressure. Stay within the stated positional task.",
+      "No chokes, neck cranks, snap-downs, or squeezing. Release instead of resisting through the neck."
+    ],
+    "safety_constraints": [
+      "Agree on resistance before starting. Stop and release immediately on any tap, pain, or request.",
+      "No explosive escapes, slams, neck cranks, or forced joint movement."
+    ],
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/submissions/head_and_arm_strangle/stabilize_front_headlock/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Partner adjustments, hints, and timing are app-authored; not source rules. Follow this card\u2019s restrictions even if a related video shows finishes.",
+    "video_url": "https://www.youtube.com/watch?v=l4Qz_hz_ZEA",
+    "video_relationship": "related instruction; not a demonstration of this exact game",
+    "source_untested": false,
+    "source_reviewed_in_app_build": false,
+    "submission_policy": "control_only",
+    "user_role": "defender"
+  },
+  {
+    "id": "LE01",
+    "name": "Maintain the leg-and-hip connection",
+    "category": "leg_entanglements",
+    "skills": [
+      "leg_connection",
+      "entanglement_retention"
+    ],
+    "starting_position": "You begin underneath a standing partner with your legs connected to one or both legs.",
+    "user_objective": "Retain a comfortable leg-and-hip connection as the partner tries to disengage.",
+    "partner_objective": "Stay balanced and completely disengage from your leg connections.",
+    "reset_condition": "Reset when the partner fully disengages. Your retention task is continuous.",
+    "technique_hints": [
+      "Cooperatively find a comfortable connection without loading a joint.",
+      "Follow small steps by adjusting your hip position, not by twisting the partner\u2019s foot."
+    ],
+    "partner_variants": {
+      "lower": "Begin with a shallow connection and partner ready to step clear.",
+      "similar": "Begin with a comfortable established leg connection.",
+      "higher": "Begin with additional light hand connection; partner initially uses slow footwork only."
+    },
+    "rules": [
+      "No submission finishes or finishing pressure. Stay within the stated positional task.",
+      "No submissions, heel exposure, reaping, forced inversions, or twisting a planted knee. No lifting or forced falls in this adaptation."
+    ],
+    "safety_constraints": [
+      "Agree on resistance before starting. Stop and release immediately on any tap, pain, or request.",
+      "No explosive escapes, slams, neck cranks, or forced joint movement.",
+      "Use only familiar agreed leg configurations. Release completely if either partner feels joint pressure or loses balance."
+    ],
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/guard_games/supine_guard/open_guard/entanglements/maintain_connection/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Partner adjustments, hints, and timing are app-authored; not source rules. Follow this card\u2019s restrictions even if a related video shows finishes.",
+    "video_url": "https://www.youtube.com/watch?v=a96BFUXmPO8",
+    "video_relationship": "related instruction; not a demonstration of this exact game",
+    "source_untested": false,
+    "source_reviewed_in_app_build": false,
+    "submission_policy": "control_only",
+    "user_role": "connection_player"
+  },
+  {
+    "id": "LE02",
+    "name": "Build a leg-and-hip entanglement",
+    "category": "leg_entanglements",
+    "skills": [
+      "leg_connection",
+      "entanglement_entry"
+    ],
+    "starting_position": "You begin seated beneath a standing partner, attached to one leg.",
+    "user_objective": "Improve the leg-and-hip connection to restrict movement and transfer weight comfortably.",
+    "partner_objective": "Remain upright and disengage from your connections.",
+    "reset_condition": "Continuous connection-building task; reset when the partner disengages. No invented hold-time or finish score.",
+    "technique_hints": [
+      "Notice whether your connection follows the hip rather than pulling only on the ankle.",
+      "Explore a small angle change while leaving the partner room to stay balanced."
+    ],
+    "partner_variants": {
+      "lower": "Begin with a shallow attachment and partner already preparing to clear it.",
+      "similar": "Begin with a comfortable attachment to one leg.",
+      "higher": "Begin with an additional light hand connection near the hip; partner works slowly to disengage."
+    },
+    "rules": [
+      "No submission finishes or finishing pressure. Stay within the stated positional task.",
+      "No submissions, heel exposure, reaping, twisting, forced inversions, lifting, or completed sweeps."
+    ],
+    "safety_constraints": [
+      "Agree on resistance before starting. Stop and release immediately on any tap, pain, or request.",
+      "No explosive escapes, slams, neck cranks, or forced joint movement.",
+      "Agree on a familiar configuration. No twisting of a planted foot/knee; release on joint pressure or loss of balance."
+    ],
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/guard_games/supine_guard/open_guard/entanglements/create_connection/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Partner adjustments, hints, and timing are app-authored; not source rules. Follow this card\u2019s restrictions even if a related video shows finishes.",
+    "video_url": "https://www.youtube.com/watch?v=a96BFUXmPO8",
+    "video_relationship": "related instruction; not a demonstration of this exact game",
+    "source_untested": false,
+    "source_reviewed_in_app_build": false,
+    "submission_policy": "control_only",
+    "user_role": "connection_player"
+  },
+  {
+    "id": "LE03",
+    "name": "Capture the ankle without a finish",
+    "category": "leg_entanglements",
+    "skills": [
+      "ankle_capture",
+      "leg_control"
+    ],
+    "starting_position": "You begin in familiar ashi garami with your outside elbow on the mat and the ankle not yet secured.",
+    "user_objective": "Capture the ankle in your armpit and retain the foot-and-leg connection without squeezing.",
+    "partner_objective": "Deny the capture and free the leg.",
+    "reset_condition": "Continuous capture/retention task; reset when the partner frees the leg. Release completely if either partner feels joint pressure.",
+    "technique_hints": [
+      "Cooperatively rehearse the ankle connection with no forearm pressure.",
+      "Follow a small leg movement without turning the foot or exposing the heel."
+    ],
+    "partner_variants": {
+      "lower": "Begin with no hand connection and partner\u2019s leg close to clearing.",
+      "similar": "Begin with the ankle uncaptured and outside elbow grounded.",
+      "higher": "Begin with a light hand connection near the ankle; the ankle still starts outside your armpit."
+    },
+    "rules": [
+      "No submission finishes or finishing pressure. Stay within the stated positional task.",
+      "No ankle locks, heel exposure, twisting, reaping, or finishing pressure. Keep outside elbow grounded."
+    ],
+    "safety_constraints": [
+      "Agree on resistance before starting. Stop and release immediately on any tap, pain, or request.",
+      "No explosive escapes, slams, neck cranks, or forced joint movement.",
+      "Use only familiar ashi garami; release instead of turning against a trapped foot or knee."
+    ],
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/submissions/straight_ankle_lock/capture_the_foot/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Partner adjustments, hints, and timing are app-authored; not source rules. Follow this card\u2019s restrictions even if a related video shows finishes.",
+    "video_url": "https://www.youtube.com/watch?v=23vPNbK3NH0",
+    "video_relationship": "related instruction; not a demonstration of this exact game",
+    "source_untested": false,
+    "source_reviewed_in_app_build": false,
+    "submission_policy": "control_only",
+    "user_role": "connection_player"
   }
 ]

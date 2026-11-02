@@ -85,7 +85,7 @@ if plan:
     st.markdown(f"**Round length: {plan['round_minutes']} minutes** · Applies to games; preparation keeps its phase timings.")
     st.caption('Focus: '+ ' · '.join(CATEGORIES[p] for p in plan['priorities']))
     st.info('Review this plan with your partner before starting. Screenshot the expanded cards or download a copy for the gym. Rest and resets are included in each block.')
-    st.caption('Prototype adaptations, pending gym review. Partner adjustments and technique cues are OpenMat suggestions. No submissions in this starter library.')
+    st.caption('Prototype adaptations, pending gym review. Partner adjustments and technique cues are OpenMat suggestions. Submission offense focuses on entries and control; defense focuses on prevention and escapes. No finishing pressure in any game.')
     for block in plan['blocks']:
         with st.container(border=True):
             st.caption(f"{block['start']:02d}–{block['end']:02d} MIN / {block['minutes']} MINUTES")
@@ -132,7 +132,7 @@ if plan:
             st.caption(block['pacing'])
             with st.expander('Source & partner variations'):
                 st.link_button('Source inspiration',g['source_url'])
-                st.link_button('Related video · not this exact game',g['video_url'])
+                st.link_button('Source-linked video · app rules are adapted' if g['video_relationship'].startswith('source-linked') else 'Related video · not this exact game',g['video_url'])
                 st.caption(g['source_note'])
                 if g['source_untested']:
                     st.caption('The original source entry is also marked untested in the project notes.')
@@ -144,12 +144,13 @@ if plan:
 else:
     st.subheader('Structure without losing the freedom to train.')
     a,b,c=st.columns(3)
-    for col,title,body in [(a,'01 / Pick a focus','Work on pin escapes, guard passing, top control, or takedowns. Choose up to three priorities.'),(b,'02 / Set the challenge','Get starting conditions matched to your partner’s relative skill. Your objective stays the same.'),(c,'03 / Train uninterrupted','Generate the whole session before training. Every block includes goals, constraints, and resets.')]:
+    for col,title,body in [(a,'01 / Pick a focus','Choose up to three priorities across pins, passing, top control, takedowns, guard offense/retention, submission offense/defense, and leg entanglements.'),(b,'02 / Set the challenge','Get starting conditions matched to your partner’s relative skill. Your objective stays the same.'),(c,'03 / Train uninterrupted','Generate the whole session before training. Every block includes goals, constraints, and resets.')]:
         with col.container(border=True):
             st.markdown('**'+title+'**')
             st.write(body)
     st.info('Use the sidebar to build your first session. Start with a familiar position and agree on comfortable resistance.')
 with st.expander('About the starter library'):
-    st.write('Ten prototype games cover four priorities, including standing entries and controlled off-balancing. They adapt summaries in your OpenMat Project Notes; timing, technique cues, and partner variants are app-authored. They have not been gym-tested. Unfinished source templates and ambiguous catalog entries are excluded.')
+    st.write(f'{len(load_games())} prototype games cover {len(CATEGORIES)} priorities. They adapt summaries in your OpenMat Project Notes; timing, technique cues, and partner variants are app-authored. They have not been gym-tested. Unfinished source templates and ambiguous catalog entries are excluded.')
+    st.caption('Submission games cover entries, control, and early escapes without finishing pressure. Leg-entanglement games cover connection, capture, and disengagement; no heel exposure or finishes. Select familiar positions and agree on the task before starting.')
     for game in load_games():
         st.write(f"**{game['name']}** · {CATEGORIES[game['category']]} · Pending gym review")

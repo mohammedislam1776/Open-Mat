@@ -17,7 +17,7 @@ Open the local URL printed by Streamlit. Choose 1–3 priorities, 30/60/90 minut
 
 ## Implemented
 
-- Ten prototype adaptations across pin escapes, guard passing, top control, and takedowns.
+- 25 prototype adaptations across nine focuses: pin escapes, guard passing, top control, takedowns, guard offense, guard retention, submission offense, submission defense, and leg entanglements.
 - Eligibility filtering, transparent ranking, priority interleaving, and exact time allocation.
 - Partner variants that preserve the chosen role and objective; manual starting-advantage override.
 - Guided technique cues, a Balanced hint, and Exploratory objectives and constraints.
@@ -49,7 +49,7 @@ Run checks with `python -m pytest -q`.
 
 No account, cloud storage, analytics, or external service calls are used by the planner. Plans live in Streamlit session memory and can be downloaded; restarting or losing the session can discard them. The interactive app requires its Python server; only downloaded/screenshot references work independently offline. Opening source/video links requires internet access.
 
-Next: gym review of these six games, expand to a reviewed 10–15-game shortlist, then game swapping and a local training journal. Guard retention, submissions, timers, persistent history, and learned recommendations are not implemented.
+Next: gym review of the prototype games, game swapping, and a local training journal. Submission finishing rounds, timers, persistent history, and learned recommendations are not implemented.
 
 ## Preparation and wrap-up templates
 
@@ -74,3 +74,19 @@ Set `round_minutes` in `generate_session` inputs to use the same behavior withou
 ## Community Cloud
 
 See [DEPLOYMENT.md](DEPLOYMENT.md) for exact Community Cloud settings. Use `app.py` on `main`, Python 3.11, and no secrets. The GitHub test workflow verifies the app before updates are deployed.
+
+## Guard, submission, and leg-entanglement focuses
+
+Each added focus has three app-authored adaptations of the supplied catalog summaries:
+
+| Focus | Starter tasks |
+| --- | --- |
+| Guard offense | Create hand posts; connect behind shoulders; open-guard off-balancing |
+| Guard retention | Stay upright seated; rebuild inside connections; retain the knee shield |
+| Submission offense | Complete figure-four grip; separate an armbar defense; create triangle-entry alignment |
+| Submission defense | Free the arm from unloaded armbar control; deny figure-four connection; escape unloaded front-headlock control |
+| Leg entanglements | Maintain leg/hip connection; build an entanglement; capture the ankle without finishing |
+
+Submission offense is explicitly an entry/control focus in this version. Defense preserves the user's defender role for every partner level. These games do not permit submission finishes or finishing pressure. Leg-entanglement tasks prohibit heel exposure and twisting, and call for complete release if a foot/knee is trapped or pressure appears. They do not introduce heel-hook or 50/50 finishing rounds. All records preserve source/video relationships and untested flags, while app variants, hints, and reset adaptations are labeled as such. No new game is claimed to be gym-validated.
+
+Each focus works independently or in any combination of up to three priorities. Warm-up rehearsal now includes task-specific cues. Guidance, partner starts, Gi/No-Gi, round scheduling, and Markdown/JSON exports apply to every new focus. The live app is https://openmat-planner.streamlit.app/.
