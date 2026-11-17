@@ -30,7 +30,7 @@ with st.sidebar:
             format_func=lambda p: 'Anything' if p is None else POSITION_LABELS[p],
             key=f'position_{focus}',
         )
-    duration = st.select_slider('Time on the mat', [30, 60, 90], value=60, format_func=lambda n: f'{n} min')
+    duration = st.select_slider('Time on the mat', list(range(15, 91, 5)), value=60, format_func=lambda n: f'{n} min')
     round_minutes = st.slider('Round length (minutes)', min_value=1, max_value=10, value=5, step=1)
     st.caption('Games use full rounds at this length. Any leftover time is labeled as rest / transition time.')
     structure = st.radio('How much guidance?', ['guided', 'balanced', 'exploratory'], index=1, format_func=str.title)
@@ -40,8 +40,8 @@ with st.sidebar:
     start_choice = st.selectbox('Starting advantage (used only with override)', ['lower', 'similar', 'higher'], index=1, disabled=not override, format_func={'lower':'Give my partner an advantage','similar':'Use the standard start','higher':'Give me an advantage'}.get)
     effective_partner = start_choice if override else partner
     ruleset = st.radio('Training kit', ['no_gi', 'gi'], horizontal=True, format_func=lambda x: 'No-Gi' if x == 'no_gi' else 'Gi')
-    st.subheader('Prepare & wrap up')
-    st.caption('Proposed routines pending coach and physiotherapist review. Both count toward session time.')
+    st.subheader('Warm-up')
+    st.caption('Proposed routines pending coach and physiotherapist review. Warm-up counts toward session time.')
     readiness = st.radio('Arriving on the mat', ['cold','already_warm'], format_func=lambda x: 'Cold / not yet prepared' if x == 'cold' else 'Already exercised')
     if readiness == 'already_warm':
         st.caption('Account for what you actually practiced and rehearse today’s positions. Sweat alone does not establish readiness. Edit timing yourself; the app will not shorten it automatically.')
@@ -52,9 +52,7 @@ with st.sidebar:
     if standing:
         st.caption('Adds familiar stance/entry rehearsal. Only use breakfalls already learned with a coach. The warm-up includes standing rehearsal alongside any selected ground priorities.')
     warm = st.checkbox('Include warm-up', value=True)
-    warm_minutes = st.selectbox('Warm-up minutes', [15,20,25], index=1, disabled=not warm)
-    cool = st.checkbox('Include wrap-up', value=True)
-    cool_minutes = st.selectbox('Wrap-up minutes', [5,10,15], index=1, disabled=not cool)
+    warm_minutes = st.selectbox('Warm-up minutes', [5,10,15,20,25], index=3, disabled=not warm)
     equipment = st.radio('Preparation equipment', ['none','bands'], format_func=lambda x: 'No equipment' if x == 'none' else 'Light long band + mini-loop available')
     if equipment == 'bands':
         st.caption('Inspect bands; use a secure anchor if required and keep equipment outside the rolling area. Band exercises replace selected activations; they are not extra sets.')
@@ -68,7 +66,7 @@ with st.sidebar:
 # Streamlit can retain session state from before a code update. Regenerate
 # legacy plans using the current controls before rendering the new block shape.
 saved_plan = st.session_state.get('plan')
-if saved_plan and (saved_plan.get('schema_version') != 4 or any(
+if saved_plan and (saved_plan.get('schema_version') != 5 or any(
     not {'notice', 'steps', 'caution', 'aftercare'} <= block.keys()
     for block in saved_plan.get('blocks', []) if block.get('kind') != 'game'
 )):
@@ -80,7 +78,7 @@ if submitted:
 
 if st.session_state.get('planner_started', False):
     try:
-        st.session_state.plan = generate_session(dict(priorities=priorities,duration=duration,structure=structure,partner_skill=effective_partner,ruleset=ruleset,warm_up=warm,cool_down=cool,warm_up_minutes=warm_minutes,wrap_up_minutes=cool_minutes,preparation_equipment=equipment,excluded_preparation=excluded,readiness=readiness,standing_preparation=standing,round_minutes=round_minutes,position_preferences=position_preferences))
+        st.session_state.plan = generate_session(dict(priorities=priorities,duration=duration,structure=structure,partner_skill=effective_partner,ruleset=ruleset,warm_up=warm,warm_up_minutes=warm_minutes,preparation_equipment=equipment,excluded_preparation=excluded,readiness=readiness,standing_preparation=standing,round_minutes=round_minutes,position_preferences=position_preferences))
     except ValueError as e:
         st.session_state.pop('plan', None)
         st.error(str(e))

@@ -14,7 +14,7 @@ NEW_FOCUSES = ['guard_offense','guard_retention','submission_offense','submissio
 def test_new_focus_end_to_end(focus,ruleset,structure,partner):
     plan=generate_session(dict(priorities=[focus],duration=60,ruleset=ruleset,structure=structure,partner_skill=partner,round_minutes=7))
     games=[b for b in plan['blocks'] if b['kind']=='game']
-    assert len(games)==min(6,len([g for g in load_games() if g['category']==focus]),30//7)
+    assert len(games)==min(6,len([g for g in load_games() if g['category']==focus]),40//7)
     assert {b['game']['category'] for b in games}=={focus}
     assert sum(b['minutes'] for b in plan['blocks'])==60
     assert REHEARSAL_CUES[focus] in plan['blocks'][0]['steps'][-1]['instructions']

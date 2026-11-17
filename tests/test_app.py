@@ -15,7 +15,6 @@ def test_sidebar_changes_refresh_existing_plan():
     assert app.metric[2].value == 'Exploratory'
     next(s for s in app.selectbox if s.label=='Partner’s skill in these positions').set_value('higher').run()
     assert app.session_state['plan']['partner_skill'] == 'higher'
-    app.checkbox[3].uncheck().run()
     assert app.session_state['plan']['blocks'][-1]['kind'] == 'game'
     app.multiselect[0].set_value(['guard_passing']).run()
     assert app.session_state['plan']['priorities'] == ['guard_passing']
@@ -52,13 +51,13 @@ def test_preparation_controls_update_plan_and_budget():
     app=AppTest.from_file(Path(__file__).resolve().parents[1] / 'app.py',default_timeout=15).run()
     next(b for b in app.button if b.label=='Build my session').click().run()
     assert app.session_state['plan']['blocks'][0]['minutes']==20
-    assert app.session_state['plan']['blocks'][-1]['minutes']==10
-    app.select_slider[0].set_value(30).run()
+    assert app.session_state['plan']['blocks'][-1]['kind']=='game'
+    app.select_slider[0].set_value(15).run()
     assert app.error and not app.metric
-    next(s for s in app.selectbox if s.label=='Warm-up minutes').set_value(15).run()
-    next(s for s in app.selectbox if s.label=='Wrap-up minutes').set_value(5).run()
+    next(s for s in app.selectbox if s.label=='Warm-up minutes').set_value(5).run()
     assert not app.error
-    assert app.metric[0].value=='30 min'
+    assert app.metric[0].value=='15 min'
+    next(s for s in app.selectbox if s.label=='Warm-up minutes').set_value(10).run()
     next(r for r in app.radio if r.label=='Preparation equipment').set_value('bands').run()
     ids=[e['id'] for s in app.session_state['plan']['blocks'][0]['steps'] for e in s['exercises']]
     assert 'band_steps' in ids and 'bridge' not in ids
@@ -76,7 +75,7 @@ def test_legacy_session_plan_is_regenerated_before_rendering():
     app.session_state['plan']=legacy
     app.run()
     assert not app.exception
-    assert app.session_state['plan']['schema_version']==4
+    assert app.session_state['plan']['schema_version']==5
     assert app.session_state['plan']['blocks'][0]['notice']
     assert app.metric[0].value=='60 min'
 

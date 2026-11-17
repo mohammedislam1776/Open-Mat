@@ -13,7 +13,7 @@ python -m pip install -r requirements-dev.txt
 streamlit run app.py
 ```
 
-Open the local URL printed by Streamlit. Choose 1–3 priorities, 30/60/90 minutes, guidance, partner proficiency, and Gi/No-Gi, then build your plan. After the first build, sidebar changes refresh the plan automatically. Clearing all priorities removes the outdated plan and shows a validation message. Warm-up and wrap-up are enabled by default at 20 and 10 minutes, included in the time budget. Edit the warm-up to 15/20/25 minutes and wrap-up to 5/10/15 minutes, or disable either. A 30-minute session cannot fit the default preparation plus games: increase session length or explicitly adjust preparation. Each chosen priority needs at least five minutes of main work and one complete round; the planner never silently compresses preparation. Download Markdown for offline reference or JSON to retain structured session data. Browser printing is available through the browser menu; Markdown export is the reliable reference format.
+Open the local URL printed by Streamlit. Choose 1–3 focuses and optional positions, then select 15–90 minutes in five-minute increments. Warm-up is optional; when enabled choose 5–25 minutes in five-minute increments (20-minute default). All warm-up time counts toward the session. Wrap-up is no longer part of the planner. Each chosen priority needs at least five minutes of main work and one complete round; incompatible budgets show an explicit message instead of silently shortening preparation. After the first build, setting changes update the plan automatically. Download Markdown or JSON for reference.
 
 ## Implemented
 
@@ -33,9 +33,7 @@ plan = generate_session({
     'partner_skill': 'higher',
     'ruleset': 'no_gi',
     'warm_up': True,
-    'cool_down': True,
     'warm_up_minutes': 20,
-    'wrap_up_minutes': 10,
     'preparation_equipment': 'none',
     'excluded_preparation': [],
 })
@@ -51,15 +49,11 @@ No account, cloud storage, analytics, or external service calls are used by the 
 
 Next: gym review of the prototype games, game swapping, and a local training journal. Submission finishing rounds, timers, persistent history, and learned recommendations are not implemented.
 
-## Preparation and wrap-up templates
+## Warm-up templates
 
-The updated project note supplies the proposed 20-minute warm-up (5 general movement + 5 mobility + 4 activation + 6 task rehearsal) and 10-minute wrap-up (3 easy movement + 3 comfortable mobility + 2 body check + 2 optional reflection). These are detailed in the cards and Markdown/JSON exports, including doses, easier options, movement-reference links, evidence limits, and pending-review status.
+Choose 5, 10, 15, 20, or 25 minutes, or disable warm-up. A 15-minute session with a 5-minute warm-up leaves 10 minutes for games. The short five-minute routine uses two minutes of general movement, one minute of comfortable mobility, and two minutes of task rehearsal. It omits a separate activation circuit. The ten-minute routine uses 3/2/2/3 minutes for general movement, mobility, light activation, and rehearsal. Longer routines retain their more detailed phase timings. These are proposed templates, not validated BJJ injury-prevention protocols.
 
-`data/preparation.json` stores exercise metadata; `engine/preparation.py` composes timed phases. The band preset assumes both a light long band and mini-loop are available. It replaces bridges and scapular push-ups with lateral steps and external rotations; it does not add extra work or claim equivalent loading. No-equipment plans use no equipment-dependent exercises. Exclusions remove movements without inventing rehabilitation alternatives; when a phase is empty, its time remains available for rest or the user's existing approved preparation.
-
-Arrival readiness is contextual and does not automatically reduce warm-up time. Optional standing preparation uses familiar stance/entry work and previously coached breakfalls; selecting Takedowns enables standing preparation automatically, including in mixed-focus sessions. The journal is a reflection prompt only, not persistent logging. Separate progressive strength conditioning from the note is outside this change.
-
-All preparation templates remain proposed and pending physiotherapist/coach review. Movement-reference links are inherited from the supplied note and are not claims that the linked guides validate the whole sequence. No injury-prevention or soreness-prevention benefit is promised. Existing clinician restrictions take precedence.
+`data/preparation.json` contains warm-up movements only. `engine/preparation.py` composes the phase timings and adjusts the movement count/dose for shorter routines. The band preset replaces selected activations when that phase is included; the five-minute routine has no band circuit. Exclusions do not invent rehabilitation alternatives. Readiness does not automatically reduce preparation time. Takedowns enable standing rehearsal. No wrap-up or journal block is generated, even if older callers send legacy `cool_down`/`wrap_up_minutes` fields.
 
 ## Takedown focus
 
@@ -67,7 +61,7 @@ The Takedowns priority includes four proposed games from the note's standing cat
 
 ## Round length
 
-Choose a whole-minute round length from 1 through 10 minutes in the sidebar (default: 5). Changing it updates an existing plan automatically. The session header and every game show the chosen duration, number of rounds, and each round's session-clock start/end. Games are allocated whole rounds; any leftover minutes are labeled as a rest/transition buffer at the end of the last game, never silently shortened rounds. Warm-up/wrap-up keep their own phase timings. No additional between-round rest time is added outside the session budget.
+Choose a whole-minute round length from 1 through 10 minutes in the sidebar (default: 5). Changing it updates an existing plan automatically. The session header and every game show the chosen duration, number of rounds, and each round's session-clock start/end. Games are allocated whole rounds; any leftover minutes are labeled as a rest/transition buffer at the end of the last game, never silently shortened rounds. Warm-up keeps its own phase timings. No additional between-round rest time is added outside the session budget.
 
 Set `round_minutes` in `generate_session` inputs to use the same behavior without the UI. The Markdown and JSON downloads include round details. If the time budget cannot fit one whole round per priority, the planner asks for a timing/priority adjustment.
 

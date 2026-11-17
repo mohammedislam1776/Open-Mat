@@ -14,8 +14,8 @@ def generate_session(user, games=None):
     round_minutes = user.get('round_minutes', 5)
     if type(round_minutes) is not int or not 1 <= round_minutes <= 10:
         raise ValueError('Round length must be a whole number from 1 to 10 minutes.')
-    if type(duration) is not int or duration not in (30, 60, 90):
-        raise ValueError('Session length must be 30, 60, or 90 minutes.')
+    if type(duration) is not int or not 15 <= duration <= 90 or duration % 5 != 0:
+        raise ValueError('Session length must be 15–90 minutes in 5-minute increments.')
     if structure not in ('guided', 'balanced', 'exploratory') or partner not in ('lower', 'similar', 'higher') or ruleset not in ('gi', 'no_gi'):
         raise ValueError('Unsupported guidance, partner skill, or ruleset.')
     library = load_games() if games is None else games
@@ -30,9 +30,8 @@ def generate_session(user, games=None):
     if any(not any(g['category'] == p for g in ranked) for p in priorities):
         raise ValueError('No compatible games for one or more priorities. Try another position, ruleset, or library. The planner will not substitute a different position.')
     warm = user.get('warm_up_minutes', 20) if user.get('warm_up', True) else 0
-    cool = user.get('wrap_up_minutes', 10) if user.get('cool_down', True) else 0
-    if type(warm) is not int or warm not in (0,15,20,25) or type(cool) is not int or cool not in (0,5,10,15):
-        raise ValueError('Choose a 15, 20, or 25-minute warm-up and a 5, 10, or 15-minute wrap-up, or disable a block.')
+    if type(warm) is not int or warm not in (0,5,10,15,20,25) or (user.get('warm_up', True) and warm == 0):
+        raise ValueError('Choose a 5–25 minute warm-up in 5-minute increments, or disable it.')
     equipment = user.get('preparation_equipment', 'none')
     excluded = user.get('excluded_preparation', [])
     if equipment not in ('none','bands') or not isinstance(excluded, list) or any(i not in {e['id'] for e in load_exercises()} for i in excluded):
@@ -41,10 +40,10 @@ def generate_session(user, games=None):
     if readiness not in ('cold','already_warm'):
         raise ValueError('Choose whether you are arriving cold or already warmed up.')
     standing = 'takedowns' in priorities or user.get('standing_preparation', False)
-    available = duration - warm - cool
+    available = duration - warm
     minimum = max(5, round_minutes) * len(priorities)
     if available < minimum:
-        raise ValueError(f'Warm-up ({warm} min) and wrap-up ({cool} min) leave {max(0,available)} min for games. Allow at least {minimum} min for your selected priorities: increase session length, edit preparation times, or choose fewer priorities. Preparation is never shortened automatically.')
+        raise ValueError(f'Warm-up ({warm} min) leaves {max(0,available)} min for games. Allow at least {minimum} min for your selected priorities: increase session length, edit preparation times, or choose fewer priorities. Preparation is never shortened automatically.')
     # Allocate whole rounds; keep leftover minutes visible as a transition/rest buffer.
     groups = [[g for g in ranked if g['category'] == p] for p in priorities]
     selected = [group[i] for i in range(max(map(len, groups))) for group in groups if i < len(group)][:min(6, available // max(5, round_minutes))]
@@ -66,10 +65,8 @@ def generate_session(user, games=None):
         round_summary = f'{round_count} × {round_minutes}-minute round' + ('s' if round_count != 1 else '')
         if buffer:
             round_summary += f' + {buffer} min rest / transition buffer'
-        append(g['name'], minutes, kind='game', game=g, rounds=rounds, round_minutes=round_minutes, round_count=round_count, buffer_minutes=buffer, round_summary=round_summary, hints=g['technique_hints'] if structure == 'guided' else g['technique_hints'][:1] if structure == 'balanced' else [], pacing='Agree on the start and resistance before the round. Reset after each success and continue until the round ends. Use the chosen role for the round; if trading roles, switch at the next round. No separate rest intervals are added between rounds; take needed rest within the allotted time or use the labeled buffer. Warm-up and wrap-up use their own phase timings.')
-    if cool:
-        append('Wrap up', cool, kind='cool_down', instructions='Gradually settle activity, move comfortably, and reflect.', **make_routine('cool_down',cool,priorities,equipment,excluded))
-    return dict(schema_version=4, position_preferences=positions, focus_summary=focus_summary(priorities, positions), round_minutes=round_minutes, duration=duration, structure=structure, partner_skill=partner, ruleset=ruleset, priorities=priorities, blocks=blocks, prototype=True, preparation_equipment=equipment, readiness=readiness, excluded_preparation=excluded, standing_preparation=standing)
+        append(g['name'], minutes, kind='game', game=g, rounds=rounds, round_minutes=round_minutes, round_count=round_count, buffer_minutes=buffer, round_summary=round_summary, hints=g['technique_hints'] if structure == 'guided' else g['technique_hints'][:1] if structure == 'balanced' else [], pacing='Agree on the start and resistance before the round. Reset after each success and continue until the round ends. Use the chosen role for the round; if trading roles, switch at the next round. No separate rest intervals are added between rounds; take needed rest within the allotted time or use the labeled buffer. Warm-up uses its own phase timings.')
+    return dict(schema_version=5, position_preferences=positions, focus_summary=focus_summary(priorities, positions), round_minutes=round_minutes, duration=duration, structure=structure, partner_skill=partner, ruleset=ruleset, priorities=priorities, blocks=blocks, prototype=True, preparation_equipment=equipment, readiness=readiness, excluded_preparation=excluded, standing_preparation=standing)
 
 
 def plan_markdown(plan):

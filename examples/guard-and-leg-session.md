@@ -3,6 +3,8 @@
 
 Prototype game adaptations — pending gym review. Agree on resistance and resets. Stop on any tap, pain, or request.
 
+Focus: Guard offense — Anything · Guard retention — Anything · Leg entanglements — Anything
+
 ## 00–20 min · Progressive warm-up
 Raise temperature, move comfortably, activate lightly, then rehearse today’s tasks.
 Proposed routine pending coach and physiotherapist review. Not a validated BJJ injury-prevention protocol. Finish warm and coordinated, without fatigue. Completion is not clearance to roll.
@@ -49,14 +51,16 @@ Divide this phase into three easy parts: familiar ground movement; cooperative r
 - Familiar ground transitions: First third of the grappling-specific ramp. Easy shrimping, bridges supported through shoulders rather than head, and familiar technical stand-ups. Skip unfamiliar movements.
   Easier option: Cooperatively rehearse a comfortable start with little resistance.
 
-## 20–25 min · Create a hand post
-Rounds: 1 × 5-minute round
+## 20–30 min · Create a hand post
+Position: Seated open guard
+Rounds: 2 × 5-minute rounds
 - Round 1: 20–25 min (5 min)
+- Round 2: 25–30 min (5 min)
 Start: You start in seated guard with feet inside a kneeling partner’s knees. Start seated with light hand connections and feet inside.
 Your goal: Off-balance your partner to create repeated hand posts.
 Partner goal: Clear connections and flatten you onto your back.
 Reset: Your posting task is continuous; reset if you are flattened, then continue. No separate sweep score.
-Agree on the start and resistance before the round. Reset after each success and continue until the round ends. Use the chosen role for the round; if trading roles, switch at the next round. No separate rest intervals are added between rounds; take needed rest within the allotted time or use the labeled buffer. Warm-up and wrap-up use their own phase timings.
+Agree on the start and resistance before the round. Reset after each success and continue until the round ends. Use the chosen role for the round; if trading roles, switch at the next round. No separate rest intervals are added between rounds; take needed rest within the allotted time or use the labeled buffer. Warm-up uses its own phase timings.
 
 - No submission finishes or finishing pressure. Stay within the stated positional task.
 - No submissions, standing lifts, or forced falls. Keep the task at hand-posting.
@@ -65,14 +69,16 @@ Agree on the start and resistance before the round. Reset after each success and
 - Practice cue: Explore a light pull as your feet maintain inside connection.
 Source inspiration: https://slimemoldgrappling.com/games/guard_games/seated_guard/causing_posts/index.html
 
-## 25–30 min · Stay upright in seated guard
-Rounds: 1 × 5-minute round
-- Round 1: 25–30 min (5 min)
+## 30–40 min · Stay upright in seated guard
+Position: Seated open guard
+Rounds: 2 × 5-minute rounds
+- Round 1: 30–35 min (5 min)
+- Round 2: 35–40 min (5 min)
 Start: You begin seated with feet inside a kneeling partner’s knees. Begin with light hand connections and feet inside.
 Your goal: Keep an upright, connected guard as your partner removes connections.
 Partner goal: Strip your connections and flatten you onto your back.
 Reset: Continuous retention task; reset when the partner flattens you.
-Agree on the start and resistance before the round. Reset after each success and continue until the round ends. Use the chosen role for the round; if trading roles, switch at the next round. No separate rest intervals are added between rounds; take needed rest within the allotted time or use the labeled buffer. Warm-up and wrap-up use their own phase timings.
+Agree on the start and resistance before the round. Reset after each success and continue until the round ends. Use the chosen role for the round; if trading roles, switch at the next round. No separate rest intervals are added between rounds; take needed rest within the allotted time or use the labeled buffer. Warm-up uses its own phase timings.
 
 - No submission finishes or finishing pressure. Stay within the stated positional task.
 - No sweeps, submissions, or standing lifts in this adaptation.
@@ -81,14 +87,15 @@ Agree on the start and resistance before the round. Reset after each success and
 - Practice cue: Explore keeping feet between your bodies as your partner changes angle.
 Source inspiration: https://slimemoldgrappling.com/games/guard_games/seated_guard/structure_and_connections/index.html
 
-## 30–35 min · Maintain the leg-and-hip connection
+## 40–45 min · Maintain the leg-and-hip connection
+Position: Open-guard leg connections
 Rounds: 1 × 5-minute round
-- Round 1: 30–35 min (5 min)
+- Round 1: 40–45 min (5 min)
 Start: You begin underneath a standing partner with your legs connected to one or both legs. Begin with a comfortable established leg connection.
 Your goal: Retain a comfortable leg-and-hip connection as the partner tries to disengage.
 Partner goal: Stay balanced and completely disengage from your leg connections.
 Reset: Reset when the partner fully disengages. Your retention task is continuous.
-Agree on the start and resistance before the round. Reset after each success and continue until the round ends. Use the chosen role for the round; if trading roles, switch at the next round. No separate rest intervals are added between rounds; take needed rest within the allotted time or use the labeled buffer. Warm-up and wrap-up use their own phase timings.
+Agree on the start and resistance before the round. Reset after each success and continue until the round ends. Use the chosen role for the round; if trading roles, switch at the next round. No separate rest intervals are added between rounds; take needed rest within the allotted time or use the labeled buffer. Warm-up uses its own phase timings.
 
 - No submission finishes or finishing pressure. Stay within the stated positional task.
 - No submissions, heel exposure, reaping, forced inversions, or twisting a planted knee. No lifting or forced falls in this adaptation.
@@ -98,14 +105,15 @@ Agree on the start and resistance before the round. Reset after each success and
 - Practice cue: Cooperatively find a comfortable connection without loading a joint.
 Source inspiration: https://slimemoldgrappling.com/games/guard_games/supine_guard/open_guard/entanglements/maintain_connection/index.html
 
-## 35–40 min · Connect behind the shoulders
+## 45–50 min · Connect behind the shoulders
+Position: Seated open guard
 Rounds: 1 × 5-minute round
-- Round 1: 35–40 min (5 min)
+- Round 1: 45–50 min (5 min)
 Start: You start seated with feet inside a kneeling partner’s knees. Start with light hand connections and feet inside.
 Your goal: Create a hand post, then secure double underhooks and join hands behind the partner.
 Partner goal: Clear connections and flatten you onto your back.
 Reset: Reset on your joined-hand shoulder connection or when the partner flattens you.
-Agree on the start and resistance before the round. Reset after each success and continue until the round ends. Use the chosen role for the round; if trading roles, switch at the next round. No separate rest intervals are added between rounds; take needed rest within the allotted time or use the labeled buffer. Warm-up and wrap-up use their own phase timings.
+Agree on the start and resistance before the round. Reset after each success and continue until the round ends. Use the chosen role for the round; if trading roles, switch at the next round. No separate rest intervals are added between rounds; take needed rest within the allotted time or use the labeled buffer. Warm-up uses its own phase timings.
 
 - No submission finishes or finishing pressure. Stay within the stated positional task.
 - No lifts, forced falls, or neck pulling.
@@ -114,14 +122,15 @@ Agree on the start and resistance before the round. Reset after each success and
 - Practice cue: Notice the shoulder space that opens when the partner posts.
 Source inspiration: https://slimemoldgrappling.com/games/guard_games/seated_guard/connect_to_the_shoulders/index.html
 
-## 40–45 min · Rebuild inside connections
+## 50–55 min · Rebuild inside connections
+Position: Supine open guard
 Rounds: 1 × 5-minute round
-- Round 1: 40–45 min (5 min)
+- Round 1: 50–55 min (5 min)
 Start: You start supine with knees comfortably tucked; partner stands nearby. Start disconnected at comfortable foot-contact distance.
 Your goal: Build and rebuild inside hand/foot connections while keeping knees and feet in front.
 Partner goal: Clear your connections while remaining close.
 Reset: Continuous connection work. Reset cooperatively to the same distance if you fully disconnect; no sweep or pass score.
-Agree on the start and resistance before the round. Reset after each success and continue until the round ends. Use the chosen role for the round; if trading roles, switch at the next round. No separate rest intervals are added between rounds; take needed rest within the allotted time or use the labeled buffer. Warm-up and wrap-up use their own phase timings.
+Agree on the start and resistance before the round. Reset after each success and continue until the round ends. Use the chosen role for the round; if trading roles, switch at the next round. No separate rest intervals are added between rounds; take needed rest within the allotted time or use the labeled buffer. Warm-up uses its own phase timings.
 
 - No submission finishes or finishing pressure. Stay within the stated positional task.
 - No sweeps, submissions, or progression beyond the connection task.
@@ -131,14 +140,15 @@ Agree on the start and resistance before the round. Reset after each success and
 - Practice cue: Move your hips to keep the partner in front without forcing an inversion.
 Source inspiration: https://slimemoldgrappling.com/games/guard_games/supine_guard/open_guard/create_and_break_connections/index.html
 
-## 45–50 min · Build a leg-and-hip entanglement
+## 55–60 min · Build a leg-and-hip entanglement
+Position: Open-guard leg connections
 Rounds: 1 × 5-minute round
-- Round 1: 45–50 min (5 min)
+- Round 1: 55–60 min (5 min)
 Start: You begin seated beneath a standing partner, attached to one leg. Begin with a comfortable attachment to one leg.
 Your goal: Improve the leg-and-hip connection to restrict movement and transfer weight comfortably.
 Partner goal: Remain upright and disengage from your connections.
 Reset: Continuous connection-building task; reset when the partner disengages. No invented hold-time or finish score.
-Agree on the start and resistance before the round. Reset after each success and continue until the round ends. Use the chosen role for the round; if trading roles, switch at the next round. No separate rest intervals are added between rounds; take needed rest within the allotted time or use the labeled buffer. Warm-up and wrap-up use their own phase timings.
+Agree on the start and resistance before the round. Reset after each success and continue until the round ends. Use the chosen role for the round; if trading roles, switch at the next round. No separate rest intervals are added between rounds; take needed rest within the allotted time or use the labeled buffer. Warm-up uses its own phase timings.
 
 - No submission finishes or finishing pressure. Stay within the stated positional task.
 - No submissions, heel exposure, reaping, twisting, forced inversions, lifting, or completed sweeps.
@@ -147,29 +157,3 @@ Agree on the start and resistance before the round. Reset after each success and
 - Agree on a familiar configuration. No twisting of a planted foot/knee; release on joint pressure or loss of balance.
 - Practice cue: Notice whether your connection follows the hip rather than pulling only on the ankle.
 Source inspiration: https://slimemoldgrappling.com/games/guard_games/supine_guard/open_guard/entanglements/create_connection/index.html
-
-## 50–60 min · Wrap up
-Gradually settle activity, move comfortably, and reflect.
-Wrap up for a gradual transition, comfort, and reflection. No promise of preventing injury or next-day soreness.
-Use comfortable ranges. Stop for sharp pain, instability, numbness, or dizziness. Follow existing clinician restrictions; recent injury, surgery, recurrent dislocation, or ongoing symptoms need an individualized plan. No neck bridges, headstands, or forced stretching.
-
-### 50–53 min · Lower activity gradually
-Use the phase as an easy time window, not a repetition target. Leave time for rest and transitions; do not rush to complete every movement.
-- Easy walking: Walk slowly and let breathing settle. No final burpees or grip finisher.
-  Easier option: Rest comfortably if walking is uncomfortable.
-  Movement reference: https://www.orthoinfo.org/recovery/knee-conditioning-program/
-### 53–56 min · Comfortable mobility
-Use the phase as an easy time window, not a repetition target. Leave time for rest and transitions; do not rush to complete every movement.
-- Comfortable mobility choices: Choose 2–3; stretches about 20–30 seconds per side. Try a gentle calf stretch, half-kneeling hip-flexor stretch with a small pelvic tuck, cross-body shoulder stretch, or unloaded wrist/finger motion. No bouncing. Skip irritated areas.
-  Easier option: Choose unloaded wrist/hand motion or a smaller comfortable range.
-  Movement reference: https://www.orthoinfo.org/recovery/hip-conditioning-program/
-### 56–58 min · Relaxed breathing and body check
-Use the phase as an easy time window, not a repetition target. Leave time for rest and transitions; do not rush to complete every movement.
-- Relaxed breathing and body check: Sit or lie comfortably; breathe normally. Let the exhale lengthen only if comfortable. No breath holds or hyperventilation. Notice new pain, swelling, or loss of function; do not stretch those symptoms away.
-  Easier option: Sit supported and breathe normally.
-  Movement reference: https://www.orthoinfo.org/recovery/spine-conditioning-program/
-### 58–60 min · Optional reflection
-Use the phase as an easy time window, not a repetition target. Leave time for rest and transitions; do not rush to complete every movement.
-- Optional reflection: Note games, time, RPE, and one observation. What worked? What should change next time? Note symptoms that should change your next plan. This is a prompt, not a saved journal or diagnosis.
-  Easier option: Skip the journal and rest quietly.
-Afterward, rehydrate, eat according to normal needs, change damp training clothes, and follow gym hygiene practices. New or persistent symptoms should change subsequent training and prompt appropriate assessment.

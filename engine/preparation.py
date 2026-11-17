@@ -13,16 +13,22 @@ def load_exercises():
 
 def make_routine(kind, minutes, priorities, equipment='none', excluded=(), standing=False, position_preferences=None):
     library={e['id']:e for e in load_exercises()}
-    if kind=='warm_up':
-        lengths={15:[4,4,3,4],20:[5,5,4,6],25:[7,5,4,9]}[minutes]
-        activation=['bridge','scapula','bird','balance'] if equipment=='none' else ['band_steps','band_rotation','bird','balance']
-        phases=[('Raise temperature','general',['movement']),('Dynamic mobility','mobility',['ankles','hinge','adductor','rotation','hands']),('Light activation','activation',activation),('Grappling-specific ramp','rehearsal',['ground_rehearsal'])]
-    else:
-        lengths={5:[2,1,1,1],10:[3,3,2,2],15:[5,4,3,3]}[minutes]
-        phases=[('Lower activity gradually','settle',['walk']),('Comfortable mobility','comfort',['stretch']),('Relaxed breathing and body check','check',['breathe']),('Optional reflection','reflection',['reflect'])]
+    if kind != 'warm_up':
+        raise ValueError('Only warm-up routines are supported.')
+    lengths={5:[2,1,0,2],10:[3,2,2,3],15:[4,4,3,4],20:[5,5,4,6],25:[7,5,4,9]}[minutes]
+    activation=['bridge','scapula','bird','balance'] if equipment=='none' else ['band_steps','band_rotation','bird','balance']
+    if minutes <= 10:
+        activation = activation[:1] + ['balance']
+    mobility = ['ankles','hands'] if minutes == 5 else ['ankles','hinge','hands'] if minutes == 10 else ['ankles','hinge','adductor','rotation','hands']
+    phases=[('Raise temperature','general',['movement']),('Dynamic mobility','mobility',mobility),('Light activation','activation',activation),('Grappling-specific ramp','rehearsal',['ground_rehearsal'])]
     steps=[]; elapsed=0
     for (title,stage,ids),length in zip(phases,lengths):
+        if not length:
+            continue
         exercises=[dict(library[i]) for i in ids if i not in excluded]
+        if minutes == 5 and stage == 'mobility':
+            for exercise in exercises:
+                exercise['dose']='About 30 seconds of easy movement; choose comfortable range.'
         if stage=='comfort' and length==1 and exercises:
             exercises[0]['dose']='Choose one comfortable movement; if stretching, about 20 seconds per side. Use the remaining time to transition.'
         instructions='Use the phase as an easy time window, not a repetition target. Leave time for rest and transitions; do not rush to complete every movement.'
@@ -40,4 +46,4 @@ def make_routine(kind, minutes, priorities, equipment='none', excluded=(), stand
             instructions='All movements in this phase are excluded. Use the time for rest or your existing clinician-approved preparation; OpenMat will not invent a replacement.'
         steps.append(dict(title=title,stage=stage,start=elapsed,end=elapsed+length,minutes=length,instructions=instructions,exercises=exercises))
         elapsed+=length
-    return dict(steps=steps,notice=NOTICE if kind=='warm_up' else 'Wrap up for a gradual transition, comfort, and reflection. No promise of preventing injury or next-day soreness.',caution=CAUTION,aftercare='' if kind=='warm_up' else 'Afterward, rehydrate, eat according to normal needs, change damp training clothes, and follow gym hygiene practices. New or persistent symptoms should change subsequent training and prompt appropriate assessment.')
+    return dict(steps=steps,notice=NOTICE + (' Short preparation: use fewer easy movements and increase effort gradually; add time or reduce training intensity if you are not ready.' if minutes <= 10 else ''),caution=CAUTION,aftercare='')

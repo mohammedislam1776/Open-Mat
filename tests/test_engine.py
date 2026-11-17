@@ -11,7 +11,7 @@ def user(**updates):
 @pytest.mark.parametrize('duration,structure,partner,warm,cool', list(itertools.product([30,60,90], ['guided','balanced','exploratory'], ['lower','similar','higher'], [True,False], [True,False])))
 def test_session_contract(duration,structure,partner,warm,cool):
     inputs = dict(priorities=['pin_escapes','guard_passing','top_control'],duration=duration,structure=structure,partner_skill=partner,warm_up=warm,cool_down=cool)
-    if duration - (20 if warm else 0) - (10 if cool else 0) < 15:
+    if duration - (20 if warm else 0) < 15:
         with pytest.raises(ValueError, match='Preparation is never shortened'):
             generate_session(inputs)
         return
@@ -37,7 +37,7 @@ def test_partner_preserves_role_and_objective():
                 assert g['adjusted_start'] == original['partner_variants'][skill]
 
 
-@pytest.mark.parametrize('patch', [dict(priorities=[]),dict(priorities=['unknown']),dict(priorities=['pin_escapes']*2),dict(duration=45),dict(partner_skill='mixed'),dict(structure='unknown'),dict(ruleset='unknown')])
+@pytest.mark.parametrize('patch', [dict(priorities=[]),dict(priorities=['unknown']),dict(priorities=['pin_escapes']*2),dict(duration=17),dict(partner_skill='mixed'),dict(structure='unknown'),dict(ruleset='unknown')])
 def test_reject_invalid_inputs(patch):
     inputs=user(); inputs.update(patch)
     with pytest.raises(ValueError): generate_session(inputs)
@@ -64,24 +64,24 @@ def test_export_contains_entire_plan():
 
 def test_default_preparation_and_export():
     plan=generate_session(user())
-    warm,wrap=plan['blocks'][0],plan['blocks'][-1]
-    assert (warm['minutes'],wrap['minutes'])==(20,10)
+    warm=plan['blocks'][0]
+    assert warm['minutes']==20
     assert [s['minutes'] for s in warm['steps']]==[5,5,4,6]
-    assert [s['minutes'] for s in wrap['steps']]==[3,3,2,2]
+    assert all(b['kind']!='cool_down' for b in plan['blocks'])
+    assert plan['blocks'][-1]['kind']=='game'
     output=plan_markdown(plan)
-    for block in (warm,wrap):
-        assert sum(s['minutes'] for s in block['steps'])==block['minutes']
-        for step in block['steps']:
-            assert step['title'] in output
-            for e in step['exercises']:
-                assert e['dose'] in output and e['cue'] in output
+    assert sum(s['minutes'] for s in warm['steps'])==warm['minutes']
+    for step in warm['steps']:
+        assert step['title'] in output
+        for e in step['exercises']:
+            assert e['dose'] in output and e['cue'] in output
 
 
-@pytest.mark.parametrize('warm,wrap', list(itertools.product([15,20,25],[5,10,15])))
-def test_editable_preparation_times(warm,wrap):
-    plan=generate_session(dict(priorities=['pin_escapes'],duration=90,warm_up_minutes=warm,wrap_up_minutes=wrap))
+@pytest.mark.parametrize('warm',[5,10,15,20,25])
+def test_editable_preparation_times(warm):
+    plan=generate_session(dict(priorities=['pin_escapes'],duration=90,warm_up_minutes=warm))
     assert plan['blocks'][0]['minutes']==warm
-    assert plan['blocks'][-1]['minutes']==wrap
+    assert plan['blocks'][-1]['kind']=='game'
     assert sum(b['minutes'] for b in plan['blocks'])==90
 
 
@@ -96,16 +96,16 @@ def test_band_substitutions_and_exclusions():
     assert 'excluded' in band['blocks'][0]['steps'][-1]['instructions']
 
 
-@pytest.mark.parametrize('patch',[{'warm_up_minutes':5},{'wrap_up_minutes':8},{'preparation_equipment':'machine'},{'excluded_preparation':['unknown']}])
+@pytest.mark.parametrize('patch',[{'warm_up_minutes':3},{'warm_up_minutes':7},{'preparation_equipment':'machine'},{'excluded_preparation':['unknown']}])
 def test_invalid_preparation_options(patch):
     inputs=user(); inputs.update(patch)
     with pytest.raises(ValueError): generate_session(inputs)
 
 
 def test_short_session_requires_explicit_time_adjustment():
-    with pytest.raises(ValueError,match='leave 0 min'):
-        generate_session(dict(priorities=['pin_escapes'],duration=30))
-    plan=generate_session(dict(priorities=['pin_escapes'],duration=30,warm_up_minutes=15,wrap_up_minutes=5))
+    with pytest.raises(ValueError,match='leaves 0 min'):
+        generate_session(dict(priorities=['pin_escapes'],duration=15))
+    plan=generate_session(dict(priorities=['pin_escapes'],duration=15,warm_up_minutes=5))
     assert sum(b['minutes'] for b in plan['blocks'] if b['kind']=='game')==10
 
 
@@ -147,7 +147,7 @@ def test_rounds_have_selected_length_and_fit_session(round_minutes,duration):
             assert r['end']-r['start']==r['minutes']==round_minutes
         assert block['rounds'][-1]['end']+block['buffer_minutes']==block['end']
         assert sum(r['minutes'] for r in block['rounds'])+block['buffer_minutes']==block['minutes']
-    assert sum(b['buffer_minutes'] for b in game_blocks)==(duration-30)%round_minutes
+    assert sum(b['buffer_minutes'] for b in game_blocks)==(duration-20)%round_minutes
 
 
 @pytest.mark.parametrize('invalid',[0,11,2.5,True,'5'])
@@ -160,7 +160,7 @@ def test_round_export_and_remainder_are_explicit():
     plan=generate_session(dict(priorities=['pin_escapes'],round_minutes=7))
     output=plan_markdown(plan)
     assert '7-minute rounds' in output
-    assert '2 min rest / transition buffer' in output
+    assert '5 min rest / transition buffer' in output
     assert 'not a shortened round' in output
     for b in plan['blocks']:
         if b['kind']=='game':
@@ -170,4 +170,4 @@ def test_round_export_and_remainder_are_explicit():
 
 def test_long_rounds_need_one_full_round_per_priority():
     with pytest.raises(ValueError,match='at least 30 min'):
-        generate_session(dict(priorities=['pin_escapes','guard_passing','takedowns'],duration=30,warm_up=False,cool_down=True,round_minutes=10))
+        generate_session(dict(priorities=['pin_escapes','guard_passing','takedowns'],duration=25,warm_up=False,round_minutes=10))
