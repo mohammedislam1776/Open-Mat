@@ -1,4 +1,4 @@
-from .recommender import CATEGORIES, load_games, rank_games
+from .recommender import CATEGORIES, POSITION_LABELS, available_positions, focus_summary, load_games, rank_games
 from .partner_adjustment import adjust_game
 from .preparation import make_routine, load_exercises
 
@@ -18,9 +18,17 @@ def generate_session(user, games=None):
         raise ValueError('Session length must be 30, 60, or 90 minutes.')
     if structure not in ('guided', 'balanced', 'exploratory') or partner not in ('lower', 'similar', 'higher') or ruleset not in ('gi', 'no_gi'):
         raise ValueError('Unsupported guidance, partner skill, or ruleset.')
-    ranked = rank_games(load_games() if games is None else games, priorities, ruleset, user.get('recent_games', []))
+    library = load_games() if games is None else games
+    positions = user.get('position_preferences', {})
+    if not isinstance(positions, dict) or any(focus not in priorities for focus in positions):
+        raise ValueError('Position choices must belong to the selected focuses.')
+    for focus, position in positions.items():
+        if position is not None and (not isinstance(position, str) or position not in available_positions(focus, library)):
+            raise ValueError(f'No supported position for {CATEGORIES[focus]}. Choose an available position or Anything.')
+    positions = {focus: position for focus, position in positions.items() if position is not None}
+    ranked = rank_games(library, priorities, ruleset, user.get('recent_games', []), positions)
     if any(not any(g['category'] == p for g in ranked) for p in priorities):
-        raise ValueError('No compatible games for one or more priorities. Try another ruleset or library.')
+        raise ValueError('No compatible games for one or more priorities. Try another position, ruleset, or library. The planner will not substitute a different position.')
     warm = user.get('warm_up_minutes', 20) if user.get('warm_up', True) else 0
     cool = user.get('wrap_up_minutes', 10) if user.get('cool_down', True) else 0
     if type(warm) is not int or warm not in (0,15,20,25) or type(cool) is not int or cool not in (0,5,10,15):
@@ -47,7 +55,7 @@ def generate_session(user, games=None):
         start = sum(b['minutes'] for b in blocks)
         blocks.append(dict(title=title, minutes=minutes, start=start, end=start+minutes, **details))
     if warm:
-        append('Progressive warm-up', warm, kind='warm_up', instructions='Raise temperature, move comfortably, activate lightly, then rehearse today’s tasks.', **make_routine('warm_up',warm,priorities,equipment,excluded,standing))
+        append('Progressive warm-up', warm, kind='warm_up', instructions='Raise temperature, move comfortably, activate lightly, then rehearse today’s tasks.', **make_routine('warm_up',warm,priorities,equipment,excluded,standing,positions))
     for i, game in enumerate(selected):
         g = adjust_game(game, partner)
         round_count = base + (i < extra)
@@ -61,11 +69,12 @@ def generate_session(user, games=None):
         append(g['name'], minutes, kind='game', game=g, rounds=rounds, round_minutes=round_minutes, round_count=round_count, buffer_minutes=buffer, round_summary=round_summary, hints=g['technique_hints'] if structure == 'guided' else g['technique_hints'][:1] if structure == 'balanced' else [], pacing='Agree on the start and resistance before the round. Reset after each success and continue until the round ends. Use the chosen role for the round; if trading roles, switch at the next round. No separate rest intervals are added between rounds; take needed rest within the allotted time or use the labeled buffer. Warm-up and wrap-up use their own phase timings.')
     if cool:
         append('Wrap up', cool, kind='cool_down', instructions='Gradually settle activity, move comfortably, and reflect.', **make_routine('cool_down',cool,priorities,equipment,excluded))
-    return dict(schema_version=3, round_minutes=round_minutes, duration=duration, structure=structure, partner_skill=partner, ruleset=ruleset, priorities=priorities, blocks=blocks, prototype=True, preparation_equipment=equipment, readiness=readiness, excluded_preparation=excluded, standing_preparation=standing)
+    return dict(schema_version=4, position_preferences=positions, focus_summary=focus_summary(priorities, positions), round_minutes=round_minutes, duration=duration, structure=structure, partner_skill=partner, ruleset=ruleset, priorities=priorities, blocks=blocks, prototype=True, preparation_equipment=equipment, readiness=readiness, excluded_preparation=excluded, standing_preparation=standing)
 
 
 def plan_markdown(plan):
     lines = ['# OpenMat · Your session', f"{plan['duration']} minutes · {plan['structure'].title()} · {plan['ruleset'].replace('_', '-')} · Partner: {plan['partner_skill']} · {plan['round_minutes']}-minute rounds", '', 'Prototype game adaptations — pending gym review. Agree on resistance and resets. Stop on any tap, pain, or request.', '']
+    lines += [f"Focus: {plan['focus_summary']}", '']
     for b in plan['blocks']:
         lines += [f"## {b['start']:02d}–{b['end']:02d} min · {b['title']}"]
         if b['kind'] != 'game':
@@ -81,6 +90,7 @@ def plan_markdown(plan):
             lines += ['']
             continue
         g = b['game']
+        lines += ['Position: ' + ', '.join(POSITION_LABELS[p] for p in g['positions'])]
         lines += [f"Rounds: {b['round_summary']}"]
         for round in b['rounds']:
             lines += [f"- Round {round['number']}: {round['start']:02d}–{round['end']:02d} min ({round['minutes']} min)"]

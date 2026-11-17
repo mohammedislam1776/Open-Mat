@@ -1,7 +1,7 @@
 import json
 import streamlit as st
 from engine import generate_session, plan_markdown
-from engine.recommender import CATEGORIES, load_games
+from engine.recommender import CATEGORIES, POSITION_LABELS, available_positions, load_games
 from engine.preparation import load_exercises
 
 st.set_page_config(page_title='OpenMat · Train with intention', page_icon='🥋', layout='wide')
@@ -20,6 +20,16 @@ st.write('Choose your focus. Find the right challenge. Leave room to explore.')
 with st.sidebar:
     st.header('Build your session')
     priorities = st.multiselect('What are you working on?', list(CATEGORIES), default=['pin_escapes'], format_func=CATEGORIES.get, max_selections=3)
+    position_preferences = {}
+    if priorities:
+        st.caption('Any particular position? Anything keeps the full focus. Only positions with playable games are listed.')
+    for focus in priorities:
+        position_preferences[focus] = st.selectbox(
+            f'{CATEGORIES[focus]} · Position / situation',
+            [None, *available_positions(focus)],
+            format_func=lambda p: 'Anything' if p is None else POSITION_LABELS[p],
+            key=f'position_{focus}',
+        )
     duration = st.select_slider('Time on the mat', [30, 60, 90], value=60, format_func=lambda n: f'{n} min')
     round_minutes = st.slider('Round length (minutes)', min_value=1, max_value=10, value=5, step=1)
     st.caption('Games use full rounds at this length. Any leftover time is labeled as rest / transition time.')
@@ -58,7 +68,7 @@ with st.sidebar:
 # Streamlit can retain session state from before a code update. Regenerate
 # legacy plans using the current controls before rendering the new block shape.
 saved_plan = st.session_state.get('plan')
-if saved_plan and (saved_plan.get('schema_version') != 3 or any(
+if saved_plan and (saved_plan.get('schema_version') != 4 or any(
     not {'notice', 'steps', 'caution', 'aftercare'} <= block.keys()
     for block in saved_plan.get('blocks', []) if block.get('kind') != 'game'
 )):
@@ -70,7 +80,7 @@ if submitted:
 
 if st.session_state.get('planner_started', False):
     try:
-        st.session_state.plan = generate_session(dict(priorities=priorities,duration=duration,structure=structure,partner_skill=effective_partner,ruleset=ruleset,warm_up=warm,cool_down=cool,warm_up_minutes=warm_minutes,wrap_up_minutes=cool_minutes,preparation_equipment=equipment,excluded_preparation=excluded,readiness=readiness,standing_preparation=standing,round_minutes=round_minutes))
+        st.session_state.plan = generate_session(dict(priorities=priorities,duration=duration,structure=structure,partner_skill=effective_partner,ruleset=ruleset,warm_up=warm,cool_down=cool,warm_up_minutes=warm_minutes,wrap_up_minutes=cool_minutes,preparation_equipment=equipment,excluded_preparation=excluded,readiness=readiness,standing_preparation=standing,round_minutes=round_minutes,position_preferences=position_preferences))
     except ValueError as e:
         st.session_state.pop('plan', None)
         st.error(str(e))
@@ -83,7 +93,7 @@ if plan:
     b.metric('Focused games', sum(x['kind']=='game' for x in plan['blocks']))
     c.metric('Guidance', plan['structure'].title())
     st.markdown(f"**Round length: {plan['round_minutes']} minutes** · Applies to games; preparation keeps its phase timings.")
-    st.caption('Focus: '+ ' · '.join(CATEGORIES[p] for p in plan['priorities']))
+    st.caption('Focus: ' + plan['focus_summary'])
     st.info('Review this plan with your partner before starting. Screenshot the expanded cards or download a copy for the gym. Rest and resets are included in each block.')
     st.caption('Prototype adaptations, pending gym review. Partner adjustments and technique cues are OpenMat suggestions. Submission offense focuses on entries and control; defense focuses on prevention and escapes. No finishing pressure in any game.')
     for block in plan['blocks']:
@@ -115,6 +125,7 @@ if plan:
             if block['buffer_minutes']:
                 st.caption(f"{block['rounds'][-1]['end']:02d}–{block['end']:02d} min: rest / transition buffer. No shortened round.")
             g = block['game']
+            st.caption('Position: ' + ', '.join(POSITION_LABELS[p] for p in g['positions']))
             st.markdown('**Start**')
             st.write(g['starting_position']+' '+g['adjusted_start'])
             left,right = st.columns(2)

@@ -17,7 +17,7 @@ Open the local URL printed by Streamlit. Choose 1–3 priorities, 30/60/90 minut
 
 ## Implemented
 
-- 25 prototype adaptations across nine focuses: pin escapes, guard passing, top control, takedowns, guard offense, guard retention, submission offense, submission defense, and leg entanglements.
+- 28 prototype adaptations across nine focuses: pin escapes, guard passing, top control, takedowns, guard offense, guard retention, submission offense, submission defense, and leg entanglements.
 - Eligibility filtering, transparent ranking, priority interleaving, and exact time allocation.
 - Partner variants that preserve the chosen role and objective; manual starting-advantage override.
 - Guided technique cues, a Balanced hint, and Exploratory objectives and constraints.
@@ -77,7 +77,7 @@ See [DEPLOYMENT.md](DEPLOYMENT.md) for exact Community Cloud settings. Use `app.
 
 ## Guard, submission, and leg-entanglement focuses
 
-Each added focus has three app-authored adaptations of the supplied catalog summaries:
+The expanded focuses use app-authored adaptations of the supplied catalog summaries; Guard offense now includes three additional closed-guard games:
 
 | Focus | Starter tasks |
 | --- | --- |
@@ -90,3 +90,26 @@ Each added focus has three app-authored adaptations of the supplied catalog summ
 Submission offense is explicitly an entry/control focus in this version. Defense preserves the user's defender role for every partner level. These games do not permit submission finishes or finishing pressure. Leg-entanglement tasks prohibit heel exposure and twisting, and call for complete release if a foot/knee is trapped or pressure appears. They do not introduce heel-hook or 50/50 finishing rounds. All records preserve source/video relationships and untested flags, while app variants, hints, and reset adaptations are labeled as such. No new game is claimed to be gym-validated.
 
 Each focus works independently or in any combination of up to three priorities. Warm-up rehearsal now includes task-specific cues. Guidance, partner starts, Gi/No-Gi, round scheduling, and Markdown/JSON exports apply to every new focus. The live app is https://openmat-planner.streamlit.app/.
+
+## Position / situation selection
+
+Each selected focus has its own **Position / situation** menu directly below the focus selector. **Anything** uses the whole focus library. A specific position is a strict eligibility filter, independently applied to that focus; other focuses retain their own choices. Unsupported or incompatible choices produce an error rather than substituting another position. Only positions with playable records appear in the UI.
+
+All games now carry `positions`, `problems`, and `progression_order` metadata. The data model supports multiple position tags per game, but tags describe supported starts rather than merely the destination of a transition. Problem metadata prepares for more specific future filtering; there is no separate problem selector in this release.
+
+**Guard offense → Closed guard** selects a three-game sequence: break posture and establish upper-body connections; create meaningful hand posts; develop a hip-to-shoulder attacking angle. These remain positional games with objectives and constraints, not mandatory technique repetitions. Their order is preserved for a position-specific selection even if recent-game history is provided. Other guard-offense starts are Seated open guard and Supine open guard. Future positions such as butterfly or 50/50 need curated game records before appearing as choices.
+
+The pure-engine input is a mapping keyed by selected focus:
+
+```python
+plan = generate_session({
+    'priorities': ['guard_offense', 'guard_retention'],
+    'position_preferences': {
+        'guard_offense': 'closed_guard',
+        'guard_retention': 'half_guard',
+    },
+    'duration': 60,
+})
+```
+
+Omit a focus key or use `None` for Anything. The plan and Markdown/JSON downloads preserve these choices; warm-up rehearsal uses the selected positions. Partner adjustments change the challenge while retaining position and user objective. App-authored rules, source provenance, no-finishing restrictions, and pending-review labels remain in place.

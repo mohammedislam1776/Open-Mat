@@ -42,7 +42,15 @@
     "video_url": "https://www.youtube.com/watch?v=Ps3nesZp1YU",
     "video_relationship": "related instruction; not a demonstration of this exact game",
     "source_untested": false,
-    "source_reviewed_in_app_build": false
+    "source_reviewed_in_app_build": false,
+    "positions": [
+      "side_control"
+    ],
+    "problems": [
+      "framing",
+      "guard_recovery"
+    ],
+    "progression_order": 0
   },
   {
     "id": "PE02",
@@ -87,7 +95,15 @@
     "video_url": "https://www.youtube.com/watch?v=Q2aN-OiUEw8",
     "video_relationship": "related instruction; not a demonstration of this exact game",
     "source_untested": false,
-    "source_reviewed_in_app_build": false
+    "source_reviewed_in_app_build": false,
+    "positions": [
+      "side_control"
+    ],
+    "problems": [
+      "framing",
+      "guard_recovery"
+    ],
+    "progression_order": 0
   },
   {
     "id": "GP01",
@@ -132,7 +148,15 @@
     "video_url": "https://www.youtube.com/watch?v=38xCki4sTYY",
     "video_relationship": "related instruction; not a demonstration of this exact game",
     "source_untested": true,
-    "source_reviewed_in_app_build": false
+    "source_reviewed_in_app_build": false,
+    "positions": [
+      "half_guard"
+    ],
+    "problems": [
+      "connection",
+      "passing"
+    ],
+    "progression_order": 0
   },
   {
     "id": "GP02",
@@ -177,7 +201,15 @@
     "video_url": "https://www.youtube.com/watch?v=-BJrPT7VfEI",
     "video_relationship": "related instruction; not a demonstration of this exact game",
     "source_untested": false,
-    "source_reviewed_in_app_build": false
+    "source_reviewed_in_app_build": false,
+    "positions": [
+      "half_guard"
+    ],
+    "problems": [
+      "connection",
+      "passing"
+    ],
+    "progression_order": 0
   },
   {
     "id": "TC01",
@@ -222,7 +254,15 @@
     "video_url": "https://www.youtube.com/watch?v=Ps3nesZp1YU",
     "video_relationship": "related instruction; not a demonstration of this exact game",
     "source_untested": true,
-    "source_reviewed_in_app_build": false
+    "source_reviewed_in_app_build": false,
+    "positions": [
+      "side_control"
+    ],
+    "problems": [
+      "balance",
+      "pinning"
+    ],
+    "progression_order": 0
   },
   {
     "id": "TC02",
@@ -267,7 +307,15 @@
     "video_url": "https://www.youtube.com/watch?v=cans383if9Q",
     "video_relationship": "related instruction; not a demonstration of this exact game",
     "source_untested": true,
-    "source_reviewed_in_app_build": false
+    "source_reviewed_in_app_build": false,
+    "positions": [
+      "side_control"
+    ],
+    "problems": [
+      "balance",
+      "pinning"
+    ],
+    "progression_order": 0
   },
   {
     "id": "TD01",
@@ -317,7 +365,16 @@
     "source_untested": true,
     "source_reviewed_in_app_build": false,
     "standing": true,
-    "allows_controlled_descent": false
+    "allows_controlled_descent": false,
+    "positions": [
+      "hand_fighting"
+    ],
+    "problems": [
+      "standing_connection",
+      "balance",
+      "entries"
+    ],
+    "progression_order": 0
   },
   {
     "id": "TD02",
@@ -367,7 +424,16 @@
     "source_untested": false,
     "source_reviewed_in_app_build": false,
     "standing": true,
-    "allows_controlled_descent": false
+    "allows_controlled_descent": false,
+    "positions": [
+      "single_leg"
+    ],
+    "problems": [
+      "standing_connection",
+      "balance",
+      "entries"
+    ],
+    "progression_order": 0
   },
   {
     "id": "TD03",
@@ -417,7 +483,16 @@
     "source_untested": false,
     "source_reviewed_in_app_build": false,
     "standing": true,
-    "allows_controlled_descent": false
+    "allows_controlled_descent": false,
+    "positions": [
+      "clinch"
+    ],
+    "problems": [
+      "standing_connection",
+      "balance",
+      "entries"
+    ],
+    "progression_order": 0
   },
   {
     "id": "TD04",
@@ -467,7 +542,16 @@
     "source_untested": false,
     "source_reviewed_in_app_build": false,
     "standing": true,
-    "allows_controlled_descent": true
+    "allows_controlled_descent": true,
+    "positions": [
+      "single_leg"
+    ],
+    "problems": [
+      "standing_connection",
+      "balance",
+      "entries"
+    ],
+    "progression_order": 0
   },
   {
     "id": "GO01",
@@ -514,7 +598,15 @@
     "source_untested": false,
     "source_reviewed_in_app_build": false,
     "submission_policy": "control_only",
-    "user_role": "guard_player"
+    "user_role": "guard_player",
+    "positions": [
+      "seated_open_guard"
+    ],
+    "problems": [
+      "off_balancing",
+      "guard_attack"
+    ],
+    "progression_order": 0
   },
   {
     "id": "GO02",
@@ -561,7 +653,15 @@
     "source_untested": false,
     "source_reviewed_in_app_build": false,
     "submission_policy": "control_only",
-    "user_role": "guard_player"
+    "user_role": "guard_player",
+    "positions": [
+      "seated_open_guard"
+    ],
+    "problems": [
+      "off_balancing",
+      "shoulder_connection"
+    ],
+    "progression_order": 0
   },
   {
     "id": "GO03",
@@ -609,7 +709,15 @@
     "source_untested": false,
     "source_reviewed_in_app_build": false,
     "submission_policy": "control_only",
-    "user_role": "guard_player"
+    "user_role": "guard_player",
+    "positions": [
+      "supine_open_guard"
+    ],
+    "problems": [
+      "sweeping",
+      "off_balancing"
+    ],
+    "progression_order": 0
   },
   {
     "id": "GR01",
@@ -656,7 +764,15 @@
     "source_untested": false,
     "source_reviewed_in_app_build": false,
     "submission_policy": "control_only",
-    "user_role": "guard_player"
+    "user_role": "guard_player",
+    "positions": [
+      "seated_open_guard"
+    ],
+    "problems": [
+      "retention",
+      "inside_position"
+    ],
+    "progression_order": 0
   },
   {
     "id": "GR02",
@@ -704,7 +820,15 @@
     "source_untested": false,
     "source_reviewed_in_app_build": false,
     "submission_policy": "control_only",
-    "user_role": "guard_player"
+    "user_role": "guard_player",
+    "positions": [
+      "supine_open_guard"
+    ],
+    "problems": [
+      "retention",
+      "reconnection"
+    ],
+    "progression_order": 0
   },
   {
     "id": "GR03",
@@ -751,7 +875,15 @@
     "source_untested": true,
     "source_reviewed_in_app_build": false,
     "submission_policy": "control_only",
-    "user_role": "guard_player"
+    "user_role": "guard_player",
+    "positions": [
+      "half_guard"
+    ],
+    "problems": [
+      "retention",
+      "knee_shield"
+    ],
+    "progression_order": 0
   },
   {
     "id": "SO01",
@@ -798,7 +930,15 @@
     "source_untested": false,
     "source_reviewed_in_app_build": false,
     "submission_policy": "control_only",
-    "user_role": "attacker"
+    "user_role": "attacker",
+    "positions": [
+      "side_control"
+    ],
+    "problems": [
+      "submission_entry",
+      "arm_control"
+    ],
+    "progression_order": 0
   },
   {
     "id": "SO02",
@@ -845,7 +985,15 @@
     "source_untested": false,
     "source_reviewed_in_app_build": false,
     "submission_policy": "control_only",
-    "user_role": "attacker"
+    "user_role": "attacker",
+    "positions": [
+      "armbar_control"
+    ],
+    "problems": [
+      "submission_setup",
+      "grip_separation"
+    ],
+    "progression_order": 0
   },
   {
     "id": "SO03",
@@ -892,7 +1040,15 @@
     "source_untested": false,
     "source_reviewed_in_app_build": false,
     "submission_policy": "control_only",
-    "user_role": "attacker"
+    "user_role": "attacker",
+    "positions": [
+      "closed_guard"
+    ],
+    "problems": [
+      "submission_entry",
+      "arm_separation"
+    ],
+    "progression_order": 0
   },
   {
     "id": "SD01",
@@ -939,7 +1095,15 @@
     "source_untested": false,
     "source_reviewed_in_app_build": false,
     "submission_policy": "control_only",
-    "user_role": "defender"
+    "user_role": "defender",
+    "positions": [
+      "armbar_control"
+    ],
+    "problems": [
+      "submission_escape",
+      "elbow_recovery"
+    ],
+    "progression_order": 0
   },
   {
     "id": "SD02",
@@ -986,7 +1150,15 @@
     "source_untested": false,
     "source_reviewed_in_app_build": false,
     "submission_policy": "control_only",
-    "user_role": "defender"
+    "user_role": "defender",
+    "positions": [
+      "side_control"
+    ],
+    "problems": [
+      "submission_prevention",
+      "guard_recovery"
+    ],
+    "progression_order": 0
   },
   {
     "id": "SD03",
@@ -1033,7 +1205,15 @@
     "source_untested": false,
     "source_reviewed_in_app_build": false,
     "submission_policy": "control_only",
-    "user_role": "defender"
+    "user_role": "defender",
+    "positions": [
+      "front_headlock"
+    ],
+    "problems": [
+      "submission_escape",
+      "head_control"
+    ],
+    "progression_order": 0
   },
   {
     "id": "LE01",
@@ -1081,7 +1261,15 @@
     "source_untested": false,
     "source_reviewed_in_app_build": false,
     "submission_policy": "control_only",
-    "user_role": "connection_player"
+    "user_role": "connection_player",
+    "positions": [
+      "open_guard_leg_connections"
+    ],
+    "problems": [
+      "leg_connection",
+      "entanglement_retention"
+    ],
+    "progression_order": 0
   },
   {
     "id": "LE02",
@@ -1129,7 +1317,15 @@
     "source_untested": false,
     "source_reviewed_in_app_build": false,
     "submission_policy": "control_only",
-    "user_role": "connection_player"
+    "user_role": "connection_player",
+    "positions": [
+      "open_guard_leg_connections"
+    ],
+    "problems": [
+      "leg_connection",
+      "entanglement_entry"
+    ],
+    "progression_order": 0
   },
   {
     "id": "LE03",
@@ -1177,6 +1373,179 @@
     "source_untested": false,
     "source_reviewed_in_app_build": false,
     "submission_policy": "control_only",
-    "user_role": "connection_player"
+    "user_role": "connection_player",
+    "positions": [
+      "straight_ashi"
+    ],
+    "problems": [
+      "ankle_capture",
+      "leg_control"
+    ],
+    "progression_order": 0
+  },
+  {
+    "id": "GO04",
+    "name": "Closed guard: break posture",
+    "category": "guard_offense",
+    "skills": [
+      "posture",
+      "upper_body_connection"
+    ],
+    "starting_position": "You start on bottom in closed guard with your partner kneeling inside.",
+    "user_objective": "Keep your partner\u2019s posture broken and maintain useful upper-body connections.",
+    "partner_objective": "Clear your grips and recover upright posture without standing or opening the guard.",
+    "reset_condition": "Continuous posture-versus-connection work; re-establish the agreed start if all connections are lost. No separate sweep or submission score.",
+    "technique_hints": [
+      "Rehearse a comfortable upper-body connection with your partner cooperating.",
+      "Explore changing connection as your partner recovers posture; do not pull on the neck."
+    ],
+    "partner_variants": {
+      "lower": "Partner starts upright with elbows close; establish your connections first.",
+      "similar": "Begin with light upper-body connections and comfortable posture.",
+      "higher": "Begin with established connections and partner\u2019s posture already slightly lowered."
+    },
+    "rules": [
+      "No submission finishes or finishing pressure.",
+      "Partner stays kneeling; no standing, opening/passing guard, sweeps, lifts, neck pulling, or forced inversions in this adaptation."
+    ],
+    "safety_constraints": [
+      "Agree on resistance before starting. Stop and release immediately on any tap, pain, or request.",
+      "No explosive escapes, slams, neck cranks, or forced joint movement."
+    ],
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/guard_games/supine_guard/closed_guard/create_and_break_connections/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Partner adjustments, hints, and timing are app-authored; not source rules. Follow this card\u2019s restrictions even if a related video shows finishes.",
+    "video_url": "https://www.youtube.com/watch?v=ZKsfnBbBdjk",
+    "video_relationship": "related instruction; not a demonstration of this exact game",
+    "source_untested": false,
+    "source_reviewed_in_app_build": false,
+    "submission_policy": "control_only",
+    "user_role": "guard_player",
+    "positions": [
+      "closed_guard"
+    ],
+    "problems": [
+      "posture",
+      "upper_body_connection"
+    ],
+    "progression_order": 1
+  },
+  {
+    "id": "GO05",
+    "name": "Closed guard: create movement",
+    "category": "guard_offense",
+    "skills": [
+      "off_balancing",
+      "hand_posts"
+    ],
+    "starting_position": "You start on bottom in closed guard with your partner kneeling inside.",
+    "user_objective": "Off-balance your partner to provoke repeated hand posts while keeping guard.",
+    "partner_objective": "Keep your posture and base and maintain hand contact with you.",
+    "reset_condition": "Continuous hand-posting task; recover the agreed closed-guard start if needed. No terminal sweep or submission win.",
+    "technique_hints": [
+      "Explore small changes of angle to disturb balance without forcing a fall.",
+      "Notice which hand becomes light as your partner adjusts their base."
+    ],
+    "partner_variants": {
+      "lower": "Partner starts upright and balanced; you begin without upper-body grips.",
+      "similar": "Begin with light grips and a balanced kneeling partner.",
+      "higher": "Begin with comfortable grips and partner\u2019s weight slightly forward."
+    },
+    "rules": [
+      "No submission finishes or finishing pressure.",
+      "Partner stays kneeling; no standing, opening/passing guard, sweeps, lifts, neck pulling, or forced inversions in this adaptation."
+    ],
+    "safety_constraints": [
+      "Agree on resistance before starting. Stop and release immediately on any tap, pain, or request.",
+      "No explosive escapes, slams, neck cranks, or forced joint movement."
+    ],
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/submissions/triangle/causing_posts/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Partner adjustments, hints, and timing are app-authored; not source rules. Follow this card\u2019s restrictions even if a related video shows finishes.",
+    "video_url": "https://www.youtube.com/watch?v=20j7LcZ5xRY",
+    "video_relationship": "related instruction; not a demonstration of this exact game",
+    "source_untested": false,
+    "source_reviewed_in_app_build": false,
+    "submission_policy": "control_only",
+    "user_role": "guard_player",
+    "positions": [
+      "closed_guard"
+    ],
+    "problems": [
+      "off_balancing",
+      "hand_posts"
+    ],
+    "progression_order": 2
+  },
+  {
+    "id": "GO06",
+    "name": "Closed guard: find the shoulder angle",
+    "category": "guard_offense",
+    "skills": [
+      "attacking_angle",
+      "shoulder_connection"
+    ],
+    "starting_position": "You start on bottom in closed guard with your partner kneeling inside.",
+    "user_objective": "Bring your hips to a shoulder outside your partner\u2019s arms, creating an attacking angle.",
+    "partner_objective": "Strip upper-body connections and deny the hip-to-shoulder angle.",
+    "reset_condition": "Reset when your hips reach the shoulder outside the arms, or cooperatively when connections are lost. No submission finish or forced inversion.",
+    "technique_hints": [
+      "Explore a small hip-angle change with light upper-body connections.",
+      "Keep the movement comfortable and connected; do not force your hips onto the neck."
+    ],
+    "partner_variants": {
+      "lower": "Partner starts square with protective elbow position; build your own grips.",
+      "similar": "Begin square with light upper-body connections.",
+      "higher": "Start with a small favorable hip angle and one established connection; complete the remaining angle yourself."
+    },
+    "rules": [
+      "No submission finishes or finishing pressure.",
+      "Partner stays kneeling; no standing, opening/passing guard, sweeps, lifts, neck pulling, or forced inversions in this adaptation."
+    ],
+    "safety_constraints": [
+      "Agree on resistance before starting. Stop and release immediately on any tap, pain, or request.",
+      "No explosive escapes, slams, neck cranks, or forced joint movement."
+    ],
+    "rulesets": [
+      "gi",
+      "no_gi"
+    ],
+    "intensity": "moderate",
+    "requires_partner": true,
+    "equipment": [],
+    "difficulty": 2,
+    "review_status": "prototype_adaptation_pending_gym_review",
+    "source_url": "https://slimemoldgrappling.com/games/guard_games/supine_guard/closed_guard/hip_and_shoulder_connection/index.html",
+    "source_note": "OpenMat adaptation of the supplied project-note summary. Partner adjustments, hints, and timing are app-authored; not source rules. Follow this card\u2019s restrictions even if a related video shows finishes.",
+    "video_url": "https://www.youtube.com/watch?v=eolJrphVaCU",
+    "video_relationship": "related instruction; not a demonstration of this exact game",
+    "source_untested": true,
+    "source_reviewed_in_app_build": false,
+    "submission_policy": "control_only",
+    "user_role": "guard_player",
+    "positions": [
+      "closed_guard"
+    ],
+    "problems": [
+      "attacking_angle",
+      "shoulder_connection"
+    ],
+    "progression_order": 3
   }
 ]

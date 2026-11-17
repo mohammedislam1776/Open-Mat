@@ -1,7 +1,7 @@
 """Proposed templates transcribed/adapted from the supplied project notes."""
 import json
 from pathlib import Path
-from .recommender import REHEARSAL_CUES
+from .recommender import REHEARSAL_CUES, POSITION_LABELS
 
 NOTICE = 'Proposed routine pending coach and physiotherapist review. Not a validated BJJ injury-prevention protocol. Finish warm and coordinated, without fatigue. Completion is not clearance to roll.'
 CAUTION = 'Use comfortable ranges. Stop for sharp pain, instability, numbness, or dizziness. Follow existing clinician restrictions; recent injury, surgery, recurrent dislocation, or ongoing symptoms need an individualized plan. No neck bridges, headstands, or forced stretching.'
@@ -11,7 +11,7 @@ def load_exercises():
     return json.loads((Path(__file__).resolve().parents[1] / 'data/preparation.json').read_text())
 
 
-def make_routine(kind, minutes, priorities, equipment='none', excluded=(), standing=False):
+def make_routine(kind, minutes, priorities, equipment='none', excluded=(), standing=False, position_preferences=None):
     library={e['id']:e for e in load_exercises()}
     if kind=='warm_up':
         lengths={15:[4,4,3,4],20:[5,5,4,6],25:[7,5,4,9]}[minutes]
@@ -34,7 +34,7 @@ def make_routine(kind, minutes, priorities, equipment='none', excluded=(), stand
                 movement = 'your existing comfortable, approved preparation; the ground-transition sequence is excluded'
             if standing:
                 exercises = []
-            focus_cues = '; '.join(REHEARSAL_CUES[p] for p in priorities)
+            focus_cues = '; '.join((f"{POSITION_LABELS[position_preferences[p]]}: rehearse the selected games’ starts and tasks cooperatively, without changing position" if position_preferences and position_preferences.get(p) else REHEARSAL_CUES[p]) for p in priorities)
             instructions=f"Divide this phase into three easy parts: {movement}; cooperative rehearsal of {', '.join(p.replace('_',' ') for p in priorities)} ({focus_cues}); then a simple positional task with gradually increasing resistance and no submission finishes. Skip excluded or unfamiliar movements. Put bands away before partner work."
         elif not exercises:
             instructions='All movements in this phase are excluded. Use the time for rest or your existing clinician-approved preparation; OpenMat will not invent a replacement.'

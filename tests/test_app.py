@@ -13,7 +13,7 @@ def test_sidebar_changes_refresh_existing_plan():
     assert app.metric[0].value == '90 min'
     app.radio[0].set_value('exploratory').run()
     assert app.metric[2].value == 'Exploratory'
-    app.selectbox[0].set_value('higher').run()
+    next(s for s in app.selectbox if s.label=='Partner’s skill in these positions').set_value('higher').run()
     assert app.session_state['plan']['partner_skill'] == 'higher'
     app.checkbox[3].uncheck().run()
     assert app.session_state['plan']['blocks'][-1]['kind'] == 'game'
@@ -24,7 +24,7 @@ def test_sidebar_changes_refresh_existing_plan():
 def test_partner_override_and_guidance():
     app = AppTest.from_file(Path(__file__).resolve().parents[1] / 'app.py', default_timeout=15).run()
     app.checkbox[0].check().run()
-    app.selectbox[1].set_value('higher')
+    next(s for s in app.selectbox if s.label=='Starting advantage (used only with override)').set_value('higher')
     app.radio[0].set_value('guided')
     next(b for b in app.button if b.label == 'Build my session').click().run()
     assert not app.exception
@@ -76,7 +76,7 @@ def test_legacy_session_plan_is_regenerated_before_rendering():
     app.session_state['plan']=legacy
     app.run()
     assert not app.exception
-    assert app.session_state['plan']['schema_version']==3
+    assert app.session_state['plan']['schema_version']==4
     assert app.session_state['plan']['blocks'][0]['notice']
     assert app.metric[0].value=='60 min'
 

@@ -14,7 +14,7 @@ NEW_FOCUSES = ['guard_offense','guard_retention','submission_offense','submissio
 def test_new_focus_end_to_end(focus,ruleset,structure,partner):
     plan=generate_session(dict(priorities=[focus],duration=60,ruleset=ruleset,structure=structure,partner_skill=partner,round_minutes=7))
     games=[b for b in plan['blocks'] if b['kind']=='game']
-    assert len(games)==3
+    assert len(games)==min(6,len([g for g in load_games() if g['category']==focus]),30//7)
     assert {b['game']['category'] for b in games}=={focus}
     assert sum(b['minutes'] for b in plan['blocks'])==60
     assert REHEARSAL_CUES[focus] in plan['blocks'][0]['steps'][-1]['instructions']
@@ -46,7 +46,7 @@ def test_catalog_and_control_only_policies():
     assert len({g['id'] for g in games})==len(games)
     for focus in NEW_FOCUSES:
         selected=[g for g in games if g['category']==focus]
-        assert len(selected)==3
+        assert len(selected)==(6 if focus=='guard_offense' else 3)
         for game in selected:
             assert game['review_status']=='prototype_adaptation_pending_gym_review'
             assert game['submission_policy']=='control_only'
